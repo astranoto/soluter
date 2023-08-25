@@ -1,0 +1,58 @@
+<svg width="130" height="120" viewBox="0 0 130 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M102.072 18.463L102.072 2.41003L30.4099 2.41003L30.4099 18.463L102.072 18.463Z" fill="#7B3483" />
+    <mask id="mask0_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="28" y="0" width="77" height="21">
+        <path d="M104.482 20.872L104.482 0L27.9999 -3.34313e-06L27.9999 20.872L104.482 20.872Z" fill="white" />
+    </mask>
+    <g mask="url(#mask0_0_1)">
+        <path d="M102.072 18.463L102.072 2.41003L30.4099 2.41003L30.4099 18.463L102.072 18.463Z" stroke="#161615"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <path d="M29.455 18.41H2.41V45.455H29.455V18.41Z" fill="#EE7838" />
+    <mask id="mask1_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="16" width="32" height="32">
+        <path d="M31.864 16H0V47.864H31.864V16Z" fill="white" />
+    </mask>
+    <g mask="url(#mask1_0_1)">
+        <path d="M29.455 18.41H2.41V45.455H29.455V18.41Z" stroke="#161615" stroke-width="3" stroke-linecap="round"
+            stroke-linejoin="round" />
+    </g>
+    <path d="M57.6181 73.1671L73.6711 73.1671L73.6711 46.1221L57.6181 46.1221L57.6181 73.1671Z" fill="#C22C3E" />
+    <mask id="mask2_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="55" y="43" width="22" height="33">
+        <path d="M55.2091 75.5771L76.0811 75.5771L76.0811 43.7131L55.2091 43.7131L55.2091 75.5771Z" fill="white" />
+    </mask>
+    <g mask="url(#mask2_0_1)">
+        <path d="M57.6181 73.1671L73.6711 73.1671L73.6711 46.1221L57.6181 46.1221L57.6181 73.1671Z" stroke="#161615"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <path d="M127.049 53.967L127.049 14.41L102.409 14.41L102.409 53.967L127.049 53.967Z" fill="#41A46C" />
+    <mask id="mask3_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="100" y="12" width="30" height="45">
+        <path d="M129.459 56.376L129.459 12L100 12L100 56.376L129.459 56.376Z" fill="white" />
+    </mask>
+    <g mask="url(#mask3_0_1)">
+        <path d="M127.049 53.967L127.049 14.41L102.409 14.41L102.409 53.967L127.049 53.967Z" stroke="#161615"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <path d="M87.8363 97.3443L34.1221 82.9517L28.9514 102.249L82.6656 116.642L87.8363 97.3443Z" fill="#1C5BA7" />
+    <mask id="mask4_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="26" y="80" width="65" height="40">
+        <path d="M90.7879 95.6402L32.418 80L26 103.952L84.37 119.592L90.7879 95.6402Z" fill="white" />
+    </mask>
+    <g mask="url(#mask4_0_1)">
+        <path d="M87.8363 97.3443L34.1221 82.9517L28.9514 102.249L82.6656 116.642L87.8363 97.3443Z" stroke="#161615"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <path d="M37.41 56.4542L49.922 56.4542L49.922 29.4092L37.41 29.4092L37.41 56.4542Z" fill="white" />
+    <mask id="mask5_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="35" y="27" width="18" height="32">
+        <path d="M35 58.8643L52.332 58.8643L52.332 27.0003L35 27.0003L35 58.8643Z" fill="white" />
+    </mask>
+    <g mask="url(#mask5_0_1)">
+        <path d="M37.41 56.4542L49.922 56.4542L49.922 29.4092L37.41 29.4092L37.41 56.4542Z" stroke="#161615"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <path d="M75.4091 55.0489L91.4621 55.049L91.4621 30.409L75.4091 30.4089L75.4091 55.0489Z" fill="#161615" />
+    <mask id="mask6_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="73" y="28" width="21" height="30">
+        <path d="M73.0001 57.459L93.8721 57.459L93.8721 28L73.0001 28L73.0001 57.459Z" fill="white" />
+    </mask>
+    <g mask="url(#mask6_0_1)">
+        <path d="M75.4091 55.0489L91.4621 55.049L91.4621 30.409L75.4091 30.4089L75.4091 55.0489Z" stroke="#161615"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+</svg>

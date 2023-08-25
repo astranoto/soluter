@@ -1,0 +1,58 @@
+<svg width="190" height="188" viewBox="0 0 190 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M134.227 64.4845L122.876 53.1333L72.2033 103.806L83.5545 115.157L134.227 64.4845Z" fill="#7B3483" />
+    <mask id="mask0_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="68" y="49" width="70" height="70">
+        <path d="M137.635 64.4838L122.876 49.7251L68.795 103.806L83.5538 118.565L137.635 64.4838Z" fill="white" />
+    </mask>
+    <g mask="url(#mask0_0_1)">
+        <path d="M134.227 64.4845L122.876 53.1333L72.2033 103.806L83.5545 115.157L134.227 64.4845Z" stroke="#161615"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <path d="M187.341 2.87695H160.296V29.922H187.341V2.87695Z" fill="#EE7838" />
+    <mask id="mask1_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="157" y="0" width="33" height="33">
+        <path d="M189.75 0.467041H157.886V32.331H189.75V0.467041Z" fill="white" />
+    </mask>
+    <g mask="url(#mask1_0_1)">
+        <path d="M187.341 2.87695H160.296V29.922H187.341V2.87695Z" stroke="#161615" stroke-width="3"
+            stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <path d="M154.925 67.0653L143.574 55.7141L124.45 74.8378L135.801 86.189L154.925 67.0653Z" fill="#C22C3E" />
+    <mask id="mask2_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="121" y="52" width="38" height="38">
+        <path d="M158.333 67.0646L143.574 52.3059L121.043 74.8372L135.801 89.5959L158.333 67.0646Z" fill="white" />
+    </mask>
+    <g mask="url(#mask2_0_1)">
+        <path d="M154.925 67.0653L143.574 55.7141L124.45 74.8378L135.801 86.189L154.925 67.0653Z" stroke="#161615"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <path d="M31.8942 138.408L3.92322 166.379L21.3463 183.802L49.3174 155.831L31.8942 138.408Z" fill="#41A46C" />
+    <mask id="mask3_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="135" width="53" height="53">
+        <path d="M31.8935 135L0.514954 166.379L21.3456 187.21L52.7242 155.831L31.8935 135Z" fill="white" />
+    </mask>
+    <g mask="url(#mask3_0_1)">
+        <path d="M31.8942 138.408L3.92322 166.379L21.3463 183.802L49.3174 155.831L31.8942 138.408Z" stroke="#161615"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <path d="M44.1265 104.366L83.448 143.687L97.5746 129.56L58.2531 90.2389L44.1265 104.366Z" fill="#1C5BA7" />
+    <mask id="mask4_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="40" y="86" width="61" height="62">
+        <path d="M40.7182 104.365L83.448 147.095L100.982 129.561L58.2524 86.8313L40.7182 104.365Z" fill="white" />
+    </mask>
+    <g mask="url(#mask4_0_1)">
+        <path d="M44.1265 104.366L83.448 143.687L97.5746 129.56L58.2531 90.2389L44.1265 104.366Z" stroke="#161615"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <path d="M101.676 54.8624L110.523 63.7097L129.647 44.586L120.799 35.7387L101.676 54.8624Z" fill="white" />
+    <mask id="mask5_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="98" y="32" width="36" height="36">
+        <path d="M98.2674 54.8623L110.523 67.1179L133.054 44.5867L120.799 32.3311L98.2674 54.8623Z" fill="white" />
+    </mask>
+    <g mask="url(#mask5_0_1)">
+        <path d="M101.676 54.8624L110.523 63.7097L129.647 44.586L120.799 35.7387L101.676 54.8624Z" stroke="#161615"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <path d="M151.022 47.0904L139.671 35.7393L122.248 53.1624L133.599 64.5136L151.022 47.0904Z" fill="#161615" />
+    <mask id="mask6_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="118" y="32" width="37" height="36">
+        <path d="M154.43 47.0898L139.671 32.3311L118.84 53.1617L133.599 67.9204L154.43 47.0898Z" fill="white" />
+    </mask>
+    <g mask="url(#mask6_0_1)">
+        <path d="M151.022 47.0904L139.671 35.7393L122.248 53.1624L133.599 64.5136L151.022 47.0904Z" stroke="#161615"
+            stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+</svg>

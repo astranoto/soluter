@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	h1 {
+		@apply text-[32px] sm:text-[40px] leading-6;
+	}
+
+	h2 {
+		@apply text-[22px] sm:text-[30px]  leading-6;
+	}
+
+	* {
+		@apply text-[16px] sm:text-[23px];
+	}
+}

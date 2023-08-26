@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-	h1 {
-		@apply text-[32px] sm:text-[40px] leading-6;
-	}
+  h1 {
+    @apply text-[24px] leading-6 sm:text-[35px] md:text-[40px];
+  }
 
-	h2 {
-		@apply text-[22px] sm:text-[30px]  leading-6;
-	}
+  h2 {
+    @apply text-[22px] leading-5 sm:text-[26px] md:text-[30px];
+  }
 
-	* {
-		@apply text-[16px] sm:text-[23px];
-	}
+  * {
+    @apply text-[14px] sm:text-[23px] md:text-[25px];
+  }
 }

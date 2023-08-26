@@ -2,14 +2,47 @@
 import { Icon } from 'astro-icon';
 ---
 
-<footer>
-    <div class="flex flex-col items-start">
-        <div class="flex items-end">
-        <Icon name="logo" width="241" height="42"/>
-        <div class="ml-5">
-            <Icon name="blocks/box" width="36" height="35" />
-        </div>    
-    </div class="mt-2">
-    <h1>Il software 100% custom</h1>
+<footer class="border-solid border-[5px] border-black">
+    <div class="flex flex-col items-center">
+        <div class="flex flex-col items-start mt-8">
+            <div class="flex items-end">
+                <Icon name="logo" width="241" height="42"/>
+                <div class="ml-5">
+                    <Icon name="blocks/box" width="36" height="35" />
+                </div>
+            </div>
+            <div class="mt-1">
+                <h1>Il software 100% custom</h1>
+            </div>
+        </div>
+        <p class="text-[14px] mt-2"> Risorse</p>
+        <p class="text-[11px]"> Guida</p>
+        <p class="text-[11px]"> FAQ</p>
+        <p class="text-[11px]"> Supporto</p>
+
+        <p class="text-[14px] mt-2"> Informative</p>
+        <p class="text-[11px]"> Cookie Policy</p>
+        <p class="text-[11px]"> Privacy policy</p>
+        <p class="text-[11px]"> Misure di sicurezza</p>
+
+        <div class="flex items-end mt-2">
+            <p class="text-[14px] mr-2"> Seguici su</p>
+            <Icon name="facebook" width="20" height="20" class="mr-2"/>
+            <Icon name="instagram" width="20" height="20"/>
+        </div>
+
+        <p class="text-[14px] mt-2"> Contattaci!</p>
+        <p class="text-[11px] mt-4"> info@soluter.it</p>
+
+        <p class="text-[14px] mt-2"> SOLUTER.IT</p>
+        <p class="text-[11px] mt-4"> sviluppato con amore da</p>
+
+        <Icon name="facebook" width="213" height="75" class="mt-4"/>
+
+        <div class="flex flex-col items-start">
+            <p class="text-[10px] mt-2"> Astranoto Srl Società Benefit © 2022</p>
+            <p class="text-[10px]"> Made in Bologna, Italy</p>
+            <p class="text-[10px]"> All rights reserved – P.IVA 3990791208</p>
+        </div>
     </div>
 </footer>

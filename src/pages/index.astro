@@ -1,16 +1,53 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import logo from './../assets/logo.svg';
-import { Icon } from 'astro-icon';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon";
+import Footer from "../components/Footer.astro";
+import markets from "../resources/markets.json";
+import TargetMarket from "../components/TargetMarket.astro";
 ---
 
 <Layout title="Soluter.">
-	<main>
-		<nav class="flex justify-between p-14">
-			<Icon name="logo" />
-			<Icon name="menu" class="h-5 w-5" />
-		</nav>
-        <Footer />
-	</main>
+  <main class="transition-all duration-200">
+    <nav class="flex justify-between px-6 py-6 sm:px-10 md:px-14">
+      <Icon name="logo" class="w-64 lg:w-72 2xl:w-96" />
+    </nav>
+    <section
+      class="mt-6 flex items-end justify-center px-6 sm:mt-4 sm:px-10 md:px-14"
+    >
+      <div class="inline-flex items-end">
+        <Icon name="green-rectangle" class="hidden h-5 xl:block" />
+        <Icon name="purple-rectangle" class="ml-12 hidden w-5 lg:block" />
+        <Icon name="orange-square" class="ml-2 h-5 sm:ml-4" />
+      </div>
+
+      <h1 class="mx-4 w-max whitespace-nowrap text-center font-medium sm:mx-7">
+        Il software 100% custom.
+      </h1>
+      <div class="inline-flex items-end">
+        <Icon name="red-rectangle" class="h-5" />
+        <Icon
+          name="blue-rectangle"
+          class="ml-8 hidden w-5 hover:text-black sm:block"
+        />
+        <Icon name="white-rectangle" class="ml-2 mr-5 hidden w-5 md:block" />
+        <Icon name="black-rectangle" class="ml-12 hidden h-5 xl:block" />
+      </div>
+    </section>
+    <section
+      class="mt-16 grid grid-cols-1 gap-8 px-6 sm:grid-cols-2 sm:px-10 md:px-14 xl:mt-32 2xl:grid-cols-4"
+    >
+      {
+        markets.map((market) => (
+          <TargetMarket
+            title={market.title}
+            subtitle={market.subtitle}
+            icon={market.icon}
+            iconClasses={market.iconClasses}
+            paragraphs={market.paragraphs}
+          />
+        ))
+      }
+    </section>
+    <Footer />
+  </main>
 </Layout>

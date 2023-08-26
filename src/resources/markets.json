@@ -1,0 +1,36 @@
+[
+  {
+    "title": "PMI",
+    "icon": "blocks/pmi",
+    "subtitle": "Potenzia il tuo reparto IT!",
+    "paragraphs": [
+      "Insieme possiamo creare soluzioni software su misura per favorire tra i sistemi esistenti della tua azienda, BI o amministrativi.",
+      "Grazie al cloud computing siamo in grado di programmare API scalabili, affidabili e sicure per l'interconnessione dei tuoi sistemi IT: così avrai una visione completa delle tue operazioni aziendali e potrai ottimizzare le risorse."
+    ]
+  },
+  {
+    "title": "Startup",
+    "icon": "blocks/startup",
+    "subtitle": "Hai l'idea ma ti manca il team di sviluppo?!",
+    "paragraphs": [
+      "Ti aiutiamo a far decollare la tua startup con le nostre soluzioni software personalizzate! Cloud computing, API, machine learning, blockchain: noi ci occuperemo della tecnologia, dandoti tutti gli strumenti (e il supporto tecnico) necessari per raggiungere i tuoi obiettivi di business.",
+      "Utilizzando tecnologie come microservizi, containerizzazione e analisi dei dati, programmeremo le applicazioni più performanti per portare la tua startup al livello successivo. ;)"
+    ]
+  },
+  {
+    "title": "Terzo Settore",
+    "icon": "heart",
+    "iconClasses": "h-8",
+    "subtitle": "Migliora la gestione, aumenta l'impatto!",
+    "paragraphs": [
+      "Sviluppiamo soluzioni costruite sulle specifiche esigenze degli enti del terzo settore: piattaforme su misura che ti permetteranno di automatizzare i processi, ottimizzare la gestione elle donazioni, semplificare la comunicazione e monitorare l'impatto delle tue iniziative. ",
+      "Siamo qui per sostenere la tua missione sociale con una solida infrastruttura tecnologica e condividendo le migliori pratiche nel settore non-profit."
+    ]
+  },
+  {
+    "title": "Pubblica Amministrazione",
+    "icon": "blocks/public",
+    "subtitle": "Coming soon!",
+    "paragraphs": []
+  }
+]

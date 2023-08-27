@@ -11,6 +11,10 @@
     @apply text-[22px] leading-5 sm:text-[26px] md:text-[30px];
   }
 
+  .btn {
+    @apply border-4 border-black text-[22px] focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:text-[26px] md:text-[30px];
+  }
+
   * {
     @apply text-[14px] sm:text-[23px] md:text-[25px];
   }

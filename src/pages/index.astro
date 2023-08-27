@@ -4,6 +4,8 @@ import { Icon } from "astro-icon";
 import Footer from "../components/Footer.astro";
 import markets from "../resources/markets.json";
 import TargetMarket from "../components/TargetMarket.astro";
+import faqs from "../resources/faq.json";
+import TargetFaq from "../components/TargetFaq.astro";
 ---
 
 <Layout title="Soluter.">
@@ -48,6 +50,14 @@ import TargetMarket from "../components/TargetMarket.astro";
         ))
       }
     </section>
+    <section class="mt-16 grid grid-rows-1 justify-center gap-[73px]">
+      {
+        faqs.map((faq) => (
+          <TargetFaq title={faq.title} paragraphs={faq.paragraphs} />
+        ))
+      }
+    </section>
+
     <Footer />
   </main>
 </Layout>

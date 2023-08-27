@@ -3,43 +3,54 @@ import { Icon } from 'astro-icon';
 ---
 
 <footer class="border-solid border-[5px] border-black">
-    <div class="flex flex-col items-center">
-        <div class="flex flex-col items-start mt-8">
+    <div class="grid grid-cols-2 gap-2 md:grid-cols-6 sm:gap-0 sm:grid-rows-1">
+        <div class="flex flex-col grid-rows-2 md:items-start items-center mt-8 col-span-2 md:ml-[90px] md:mt-[140]">
             <div class="flex items-end">
                 <Icon name="logo" width="241" height="42"/>
                 <div class="ml-5">
-                    <Icon name="blocks/box" width="36" height="35" />
+                    <Icon name="blocks/box" width="36" height="35" class="shrink"/>
                 </div>
             </div>
             <div class="mt-1">
-                <h1>Il software 100% custom</h1>
+                <p class="text-[18px]"> Il software 100% custom</p>
             </div>
         </div>
-        <p class="text-[14px] mt-2"> Risorse</p>
-        <p class="text-[11px]"> Guida</p>
-        <p class="text-[11px]"> FAQ</p>
-        <p class="text-[11px]"> Supporto</p>
 
-        <p class="text-[14px] mt-2"> Informative</p>
-        <p class="text-[11px]"> Cookie Policy</p>
-        <p class="text-[11px]"> Privacy policy</p>
-        <p class="text-[11px]"> Misure di sicurezza</p>
-
-        <div class="flex items-end mt-2">
-            <p class="text-[14px] mr-2"> Seguici su</p>
-            <Icon name="facebook" width="20" height="20" class="mr-2"/>
-            <Icon name="instagram" width="20" height="20"/>
+        <div class="flex flex-col items-center">
+            <p class="text-[14px] mt-2"> Risorse</p>
+            <p class="text-[11px]"> Guida</p>
+            <p class="text-[11px]"> FAQ</p>
+            <p class="text-[11px]"> Supporto</p>
         </div>
 
-        <p class="text-[14px] mt-2"> Contattaci!</p>
-        <p class="text-[11px] mt-4"> info@soluter.it</p>
+        <div class="flex flex-col items-center">
+            <p class="text-[14px] mt-2"> Informative</p>
+            <p class="text-[11px]"> Cookie Policy</p>
+            <p class="text-[11px]"> Privacy policy</p>
+            <p class="text-[11px]"> Misure di sicurezza</p>
+        </div>
 
-        <p class="text-[14px] mt-2"> SOLUTER.IT</p>
-        <p class="text-[11px] mt-4"> sviluppato con amore da</p>
+        <div class="flex flex-col items-center">
+            <p class="text-[14px]"> Seguici su</p>
+            <div class="flex mt-1">
+                <Icon name="facebook" width="20" height="20" class="mr-2"/>
+                <Icon name="instagram" width="20" height="20"/>
+            </div>
+        </div>
 
-        <Icon name="facebook" width="213" height="75" class="mt-4"/>
+        <div class="flex flex-col items-center">
+            <p class="text-[14px]"> Contattaci!</p>
+            <p class="text-[11px]"> info@soluter.it</p>
+        </div>
 
-        <div class="flex flex-col items-start">
+        <div class="flex flex-col items-center col-span-2">
+            <p class="text-[14px] mt-4 col-span-2"> SOLUTER.IT</p>
+            <p class="text-[11px]"> sviluppato con amore da</p>
+    
+            <Icon name="facebook" width="213" height="75" class="mt-4"/>
+        </div>
+
+        <div class="flex flex-col items-center col-span-2">
             <p class="text-[10px] mt-2"> Astranoto Srl Società Benefit © 2022</p>
             <p class="text-[10px]"> Made in Bologna, Italy</p>
             <p class="text-[10px]"> All rights reserved – P.IVA 3990791208</p>

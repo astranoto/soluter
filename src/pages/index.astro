@@ -3,9 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon";
 import Footer from "../components/Footer.astro";
 import markets from "../resources/markets.json";
+import plans from "../resources/plans.json";
 import TargetMarket from "../components/TargetMarket.astro";
 import faqs from "../resources/faq.json";
 import TargetFaq from "../components/TargetFaq.astro";
+import PlanCard from "../components/PlanCard.astro";
 ---
 
 <Layout title="Soluter.">
@@ -94,6 +96,57 @@ import TargetFaq from "../components/TargetFaq.astro";
       </div>
       <section>aa</section>
     </section>
+    <div class="relative mt-24">
+      <Icon
+        name="blocks/orange-black-down-stair"
+        class="absolute -top-5 left-10 w-10 sm:left-14 2xl:left-96"
+      />
+      <hr class="w-full border-0 border-b-4 border-black" />
+      <Icon
+        name="green-rectangle"
+        class="absolute -top-[16px] right-24 h-5 sm:-top-[28px] sm:right-44 2xl:right-96"
+      />
+      <Icon
+        name="white-rectangle"
+        class="absolute -top-[16px] right-14 h-5 sm:-top-[28px] sm:right-36 2xl:right-80"
+      />
+      <Icon
+        name="purple-rectangle"
+        class="absolute -top-[84px] hidden w-4 lg:right-14 lg:block 2xl:right-44"
+      />
+    </div>
+    <section class="relative px-6 sm:mt-4 sm:px-10 md:px-14">
+      <Icon
+        name="blocks/kinda-box"
+        class="absolute left-4 top-1 hidden h-12 lg:left-8 lg:block 2xl:left-44"
+      />
+      <h2
+        class="mt-16 px-4 text-center font-bold leading-none sm:px-8 lg:px-14 2xl:px-72"
+      >
+        Il nostro approccio è modulare e personalizzabile in tutte le sue fasi,
+        anche quella del pagamento.
+      </h2>
+      <h2
+        class="mt-4 px-4 text-center leading-none sm:px-6 lg:px-12 xl:px-10 2xl:px-64"
+      >
+        Ecco perché abbiamo pensato a una formula flessibile e non vincolante,
+        che ti permette di valutare la programmazione “step by step”.
+      </h2>
+
+      <div
+        class="just mt-16 flex flex-col items-center space-y-8 xl:grid xl:grid-cols-3 xl:items-baseline xl:gap-8 xl:space-y-0"
+      >
+        {
+          plans.map((plan) => (
+            <PlanCard
+              name={plan.name}
+              icon={plan.icon}
+              sections={plan.sections}
+            />
+          ))
+        }
+      </div>
+    </section>
     <section class="mt-16 grid grid-rows-1 justify-center gap-[73px]">
       {
         faqs.map((faq) => (
@@ -101,7 +154,6 @@ import TargetFaq from "../components/TargetFaq.astro";
         ))
       }
     </section>
-
     <Footer />
   </main>
 </Layout>

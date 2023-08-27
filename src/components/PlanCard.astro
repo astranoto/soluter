@@ -1,0 +1,37 @@
+---
+import { Icon } from "astro-icon";
+interface Props {
+  name: string;
+  icon: string;
+  sections: {
+    title: string;
+    icon: string;
+    underlineClass: string;
+    paragraphs: string[];
+  }[];
+}
+
+const props = Astro.props;
+---
+
+<div class="w-[350px] lg:w-auto">
+  <div class="flex h-10 items-end space-x-2">
+    <h2 class="font-bold">{props.name}</h2>
+    <Icon name={props.icon} class="w-5" />
+  </div>
+  {
+    props.sections.map((section) => (
+      <div class="mb-10 mt-10">
+        <div class="flex items-end space-x-2">
+          <Icon name={section.icon} class="-mb-[5px] w-5" />
+          <p class={`${section.underlineClass} font-bold`}>{section.title}</p>
+        </div>
+        <div class="ml-7 mt-6">
+          {section.paragraphs.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</div>

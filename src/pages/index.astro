@@ -71,7 +71,7 @@ import PlanCard from "../components/PlanCard.astro";
       </div>
       <a
         href="mailto:info@soluter.it"
-        class="bg-soluter-purple-500 hover:bg-soluter-purple-500/90 btn mt-12 px-8 py-1 text-white"
+        class="btn mt-12 bg-soluter-purple-500 px-8 py-1 text-white hover:bg-soluter-purple-500/90"
         >Contattaci</a
       >
     </section>
@@ -126,7 +126,21 @@ import PlanCard from "../components/PlanCard.astro";
         }
       </div>
     </section>
+    <div class="flex items-center"></div>
     <section class="mt-16 grid grid-rows-1 justify-center gap-[73px]">
+      <Icon name="blocks/question" class="item-center h-12" />
+      <div class="items-center gap-0">
+        <h1 class="text-center font-bold">
+          Queste sono alcune delle domande più frequenti che ci vengono poste
+          dai
+        </h1>
+        <h1 class="mt-[10px] text-center font-bold">
+          nostri clienti: se non trovi la risposta alla tua esigenza,
+        </h1>
+        <h1 class="text-size[30px] mt-[10px] text-center font-bold">
+          chiamaci per parlarne insieme!
+        </h1>
+      </div>
       {
         faqs.map((faq) => (
           <TargetFaq title={faq.title} paragraphs={faq.paragraphs} />

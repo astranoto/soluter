@@ -29,6 +29,10 @@ const { title, paragraphs } = Astro.props;
     </div>
   </summary>
   <p>
-    {paragraphs.map((paragraph) => <p class="text-start">{paragraph}</p>)}
+    {
+      paragraphs.map((paragraph) => (
+        <p class="whitespace-nowrap text-start">{paragraph}</p>
+      ))
+    }
   </p>
 </details>

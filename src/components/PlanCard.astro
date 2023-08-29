@@ -18,7 +18,7 @@ const props = Astro.props;
 ---
 
 <div class="w-[300px] lg:w-auto">
-  <div class="flex space-x-4">
+  <div class="relative inline-flex h-8 items-end space-x-4">
     <h2 class="font-bold leading-none">{props.name}</h2>
     <Icon name={props.icon} class={twMerge("w-5", props.iconClasses)} />
   </div>

@@ -56,7 +56,7 @@
     {
         "name": "FULL - mensile, min. 12 mesi",
         "icon": "plans/full-plan",
-        "iconClasses": "w-10",
+        "iconClasses": "w-10 absolute -right-14 lg:-right-14 lg:top-4 2xl:top-4 2xl:-right-14 top-0",
         "sections": [
             {
                 "title": "Analisi",

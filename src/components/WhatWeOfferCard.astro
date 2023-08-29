@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon";
+import { twMerge } from "tailwind-merge";
+interface Props {
+  title: string;
+  icon: string;
+  iconClasses: string;
+  paragraphs: string[];
+}
+
+const props = Astro.props;
+---
+
+<div class="w-[300px] lg:w-auto">
+  <div class="flex flex-col items-center justify-center space-y-4">
+    <Icon name={props.icon} class={twMerge(props.iconClasses)} />
+    <h2 class="font-bold leading-none">{props.title}</h2>
+  </div>
+  <div class="mt-8 text-center">
+    {
+      props.paragraphs.map((paragraph) => (
+        <p class="whitespace-nowrap">{paragraph}</p>
+      ))
+    }
+  </div>
+</div>

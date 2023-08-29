@@ -5,9 +5,11 @@ import Footer from "../components/Footer.astro";
 import markets from "../resources/markets.json";
 import plans from "../resources/plans.json";
 import TargetMarket from "../components/TargetMarket.astro";
+import whatWeOffer from "../resources/what-we-offer.json";
 import faqs from "../resources/faq.json";
 import TargetFaq from "../components/TargetFaq.astro";
 import PlanCard from "../components/PlanCard.astro";
+import WhatWeOfferCard from "../components/WhatWeOfferCard.astro";
 ---
 
 <Layout title="Soluter.">
@@ -16,7 +18,7 @@ import PlanCard from "../components/PlanCard.astro";
       <Icon name="logo" class="w-64 lg:w-72 2xl:w-96" />
     </nav>
     <section
-      class="mt-6 flex items-end justify-center px-6 sm:mt-4 sm:px-10 md:px-14"
+      class="mt-6 flex items-end justify-center px-6 sm:mt-16 sm:px-10 md:px-14"
     >
       <div class="inline-flex items-end">
         <Icon name="green-rectangle" class="hidden h-5 xl:block" />
@@ -169,6 +171,70 @@ import PlanCard from "../components/PlanCard.astro";
         name="blocks/orange-red-stacked"
         class="absolute -top-[51px] right-2 hidden w-5 lg:-top-[52px] lg:right-12 lg:block 2xl:right-14"
       />
+    </div>
+    <section class="relative px-6 sm:mt-4 sm:px-10 md:px-14">
+      <Icon
+        name="blocks/rocket"
+        class="absolute -top-10 left-2 h-16 lg:left-4 lg:top-6 lg:block lg:h-20 xl:-top-5 xl:h-36 2xl:left-32"
+      />
+      <h2
+        class="mt-16 px-4 text-center font-bold leading-none sm:px-8 lg:px-14 2xl:px-72"
+      >
+        Comprendere e anticipare i cambiamenti per prepararsi alle nuove sfide
+        globali.
+      </h2>
+      <h2
+        class="px-4 text-center leading-none sm:px-6 lg:px-12 xl:px-10 2xl:px-64"
+      >
+        Il nostro lavoro è progettare e sviluppare soluzioni informatiche e
+        tecnologiche su misura che ti aiutano a migliorare le performance della
+        tua azienda. Lo facciamo mettendo in pratica il nostro metodo: perché lo
+        abbiamo messo a punto negli anni e sappiamo che funziona al 100%.
+      </h2>
+
+      <div
+        class="just mt-16 flex flex-col items-center space-y-12 xl:grid xl:grid-cols-4 xl:items-baseline xl:gap-8 xl:space-y-0"
+      >
+        {
+          whatWeOffer.map((offer) => (
+            <WhatWeOfferCard
+              title={offer.title}
+              icon={offer.icon}
+              iconClasses={offer.iconClasses}
+              paragraphs={offer.paragraphs}
+            />
+          ))
+        }
+      </div>
+    </section>
+    <section class="mt-20 flex flex-col items-center px-6 sm:px-10 md:px-14">
+      <div class="relative">
+        <p
+          class="px-4 text-center font-bold leading-none sm:px-10 lg:px-14 2xl:px-52"
+        >
+          Hai in mente un'idea ma non sai come realizzarla?
+        </p>
+      </div>
+      <a
+        href="tel:todo"
+        class="btn mt-12 bg-soluter-blue-500 px-8 py-1 text-white hover:bg-soluter-blue-500/90"
+        >Chiamaci!</a
+      >
+    </section>
+    <div class="relative mt-24">
+      <Icon
+        name="blocks/tree"
+        class="absolute -top-[6.615rem] left-12 w-16 sm:left-16 2xl:left-96"
+      />
+      <Icon
+        name="green-rectangle-vertical"
+        class="absolute -top-[1.8rem] left-36 h-8 sm:left-36 2xl:left-[32rem]"
+      />
+      <Icon
+        name="red-rectangle"
+        class="absolute -top-[.8rem] right-40 h-4 lg:right-64"
+      />
+      <hr class="w-full border-0 border-b-4 border-black" />
     </div>
     <div class="flex items-center"></div>
     <section class="mt-16 grid grid-rows-1 justify-center gap-[73px]">

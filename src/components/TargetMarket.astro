@@ -8,7 +8,7 @@ interface Props {
   subtitle: string;
   icon: string;
   iconClasses?: string;
-  paragraphs: string[];
+  paragraphs: string[][];
 }
 
 const {
@@ -32,5 +32,9 @@ const {
     <Icon name={icon} class={twMerge("h-10", iconClasses)} />
   </div>
   <h3 class="mt-6 text-start font-bold">{subtitle}</h3>
-  {paragraphs.map((paragraph) => <p class="mt-4 text-start">{paragraph}</p>)}
+  {
+    paragraphs.map((paragraph) =>
+      paragraph.map((section) => <p class="whitespace-nowrap">{section}</p>),
+    )
+  }
 </div>

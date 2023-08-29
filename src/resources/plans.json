@@ -2,11 +2,13 @@
     {
         "name": "BASE - 2 mesi",
         "icon": "orange-square",
+        "iconClasses": "w-4",
         "sections": [
             {
                 "title": "Analisi",
                 "icon": "orange-square",
-                "underlineClass": "underline-offset-[5px] underline decoration-4 decoration-offset-1 decoration-soluter-orange",
+                "iconClasses": "w-4",
+                "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-soluter-orange-500",
                 "paragraphs": [
                     "In questa fase vengono raccolte e",
                     "analizzate le tue esigenze.",
@@ -22,17 +24,20 @@
     {
         "name": "SMART - 6 mesi",
         "icon": "plans/smart-plan",
+        "iconClasses": "w-7",
         "sections": [
             {
                 "title": "Analisi",
                 "icon": "orange-square",
-                "underlineClass": "underline-offset-[5px] underline decoration-4 decoration-offset-1 decoration-soluter-orange",
+                "iconClasses": "w-4",
+                "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-soluter-orange-500",
                 "paragraphs": []
             },
             {
                 "title": "Progettazione",
-                "icon": "green-rectangle",
-                "underlineClass": "underline-offset-[5px] underline decoration-4 decoration-offset-1 decoration-soluter-green",
+                "icon": "green-rectangle-vertical",
+                "iconClasses": "",
+                "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-soluter-green-500",
                 "paragraphs": [
                     "Si crea un design dettagliato del",
                     "sistema software. Si definiscono",
@@ -51,23 +56,27 @@
     {
         "name": "FULL - mensile, min. 12 mesi",
         "icon": "plans/full-plan",
+        "iconClasses": "w-10",
         "sections": [
             {
                 "title": "Analisi",
                 "icon": "orange-square",
-                "underlineClass": "underline-offset-[5px] underline decoration-4 decoration-offset-1 decoration-soluter-orange",
+                "iconClasses": "",
+                "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-soluter-orange-500",
                 "paragraphs": []
             },
             {
                 "title": "Progettazione",
-                "icon": "green-rectangle",
-                "underlineClass": "underline underline-offset-[5px] decoration-4 decoration-offset-1 decoration-soluter-green",
+                "icon": "green-rectangle-vertical",
+                "iconClasses": "",
+                "underlineClass": "underline underline-offset-[5px] decoration-[3px] decoration-offset-1 decoration-soluter-green-500",
                 "paragraphs": []
             },
             {
                 "title": "Sviluppo",
                 "icon": "blue-rectangle",
-                "underlineClass": "underline-offset-[5px] underline decoration-4 decoration-offset-1 decoration-soluter-blue",
+                "iconClasses": "",
+                "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-soluter-blue-500",
                 "paragraphs": [
                     "Durante questa fase, gli",
                     "sviluppatori scrivono il codice",
@@ -82,8 +91,9 @@
             },
             {
                 "title": "Testing",
-                "icon": "red-rectangle",
-                "underlineClass": "underline-offset-[5px] underline decoration-4 decoration-offset-1 decoration-soluter-red",
+                "icon": "red-rectangle-vertical",
+                "iconClasses": "",
+                "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-soluter-red-500",
                 "paragraphs": [
                     "Il software viene sottoposto a",
                     "diversi test (test di unità, di",
@@ -100,7 +110,8 @@
             {
                 "title": "Release",
                 "icon": "purple-rectangle",
-                "underlineClass": "underline-offset-[5px] underline decoration-4 decoration-offset-1 decoration-soluter-purple",
+                "iconClasses": "w-3",
+                "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-soluter-purple-500",
                 "paragraphs": [
                     "Dopo aver superato i test, il",
                     "software viene rilasciato e",
@@ -114,8 +125,9 @@
             },
             {
                 "title": "Manutenzione e licenza",
-                "icon": "black-rectangle",
-                "underlineClass": "underline-offset-[5px] underline decoration-4 decoration-offset-1 decoration-black",
+                "icon": "black-rectangle-vertical",
+                "iconClasses": "w-3",
+                "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-black",
                 "paragraphs": [
                     "Una volta rilasciato, il software",
                     "richiede attività di",

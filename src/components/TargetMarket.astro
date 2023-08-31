@@ -21,20 +21,25 @@ const {
 } = Astro.props;
 ---
 
-<div class="flex flex-col">
+<div class="flex flex-col items-center lg:items-start">
   <div
     class={twMerge(
-      "flex items-end justify-start space-x-2",
+      "flex flex-col lg:flex-row lg:items-end items-center justify-start lg:space-x-2",
       titleContainerClasses,
     )}
   >
-    <h2 class="font-bold">{title}</h2>
-    <Icon name={icon} class={twMerge("h-10", iconClasses)} />
+    <h3 class="order-2 font-bold lg:order-1">{title}</h3>
+    <Icon
+      name={icon}
+      class={twMerge("h-10 order-1 lg:order-2 mb-2 lg:mb-0", iconClasses)}
+    />
   </div>
-  <h3 class="mt-6 text-start font-bold">{subtitle}</h3>
+  <p class="mt-6 text-center font-bold lg:text-start">{subtitle}</p>
   {
     paragraphs.map((paragraph) =>
-      paragraph.map((section) => <p class="whitespace-nowrap">{section}</p>),
+      paragraph.map((section) => (
+        <p class="text-center lg:text-start">{section}</p>
+      )),
     )
   }
 </div>

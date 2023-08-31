@@ -3,19 +3,31 @@
 @tailwind utilities;
 
 @layer base {
+  /* claim */
   h1 {
-    @apply text-[24px] leading-6 sm:text-[35px] md:text-[40px];
+    @apply text-[40px] leading-8 sm:text-[35px] md:text-[40px];
   }
 
-  h2 {
-    @apply text-[22px] leading-5 sm:text-[26px] md:text-[30px];
+  /* titolo */
+  h3 {
+    @apply text-[30px] leading-7 sm:text-[26px] md:text-[30px];
+  }
+
+  /* titoletto */
+  h4 {
+    @apply text-[25px] leading-tight;
   }
 
   .btn {
-    @apply border-4 border-black text-[22px] focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:text-[26px] md:text-[30px];
+    @apply border-4 border-black text-[30px] focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:text-[26px] md:text-[30px];
   }
 
+  /* testo normale */
   * {
-    @apply text-[14px] sm:text-[23px] md:text-[25px];
+    @apply text-[20px];
+  }
+
+  .section-padding {
+    @apply px-6 sm:px-24 md:px-24 xl:px-32 2xl:px-20;
   }
 }

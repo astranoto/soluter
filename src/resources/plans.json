@@ -10,13 +10,7 @@
                 "iconClasses": "w-4",
                 "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-soluter-orange-500",
                 "paragraphs": [
-                    "In questa fase vengono raccolte e",
-                    "analizzate le tue esigenze.",
-                    "Definiamo insieme gli obiettivi del",
-                    "software, i requisiti funzionali e",
-                    "non funzionali, e identifichiamo",
-                    "eventuali vincoli tecnici o di",
-                    "business."
+                    "In questa fase vengono raccolte e analizzate le tue esigenze. Definiamo insieme gli obiettivi del software, i requisiti funzionali e non funzionali, e identifichiamo eventuali vincoli tecnici o di business."
                 ]
             }
         ]
@@ -31,7 +25,9 @@
                 "icon": "orange-square",
                 "iconClasses": "w-4",
                 "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-soluter-orange-500",
-                "paragraphs": []
+                "paragraphs": [
+                    "In questa fase vengono raccolte e analizzate le tue esigenze. Definiamo insieme gli obiettivi del software, i requisiti funzionali e non funzionali, e identifichiamo eventuali vincoli tecnici o di business."
+                ]
             },
             {
                 "title": "Progettazione",
@@ -39,16 +35,7 @@
                 "iconClasses": "",
                 "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-soluter-green-500",
                 "paragraphs": [
-                    "Si crea un design dettagliato del",
-                    "sistema software. Si definiscono",
-                    "l'architettura del software, la",
-                    "struttura dei moduli (o dei",
-                    "componenti) e si pianifica",
-                    "l'interfaccia utente. Questa fase",
-                    "può includere anche la",
-                    "progettazione del database e",
-                    "delle interazioni con i sistemi",
-                    "esterni."
+                    "Si crea un design dettagliato del sistema software. Si definiscono l'architettura del software, la struttura dei moduli (o dei componenti) e si pianifica l'interfaccia utente. Questa fase può includere anche la progettazione del database e delle interazioni con i sistemi esterni."
                 ]
             }
         ]
@@ -56,21 +43,25 @@
     {
         "name": "FULL - mensile, min. 12 mesi",
         "icon": "plans/full-plan",
-        "iconClasses": "w-10 absolute -right-14 lg:-right-14 lg:top-4 2xl:top-4 2xl:-right-14 top-0",
+        "iconClasses": "w-10 mt-7",
         "sections": [
             {
                 "title": "Analisi",
                 "icon": "orange-square",
                 "iconClasses": "",
                 "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-soluter-orange-500",
-                "paragraphs": []
+                "paragraphs": [
+                    "In questa fase vengono raccolte e analizzate le tue esigenze. Definiamo insieme gli obiettivi del software, i requisiti funzionali e non funzionali, e identifichiamo eventuali vincoli tecnici o di business."
+                ]
             },
             {
                 "title": "Progettazione",
                 "icon": "green-rectangle-vertical",
                 "iconClasses": "",
                 "underlineClass": "underline underline-offset-[5px] decoration-[3px] decoration-offset-1 decoration-soluter-green-500",
-                "paragraphs": []
+                "paragraphs": [
+                    "Si crea un design dettagliato del sistema software. Si definiscono l'architettura del software, la struttura dei moduli (o dei componenti) e si pianifica l'interfaccia utente. Questa fase può includere anche la progettazione del database e delle interazioni con i sistemi esterni."
+                ]
             },
             {
                 "title": "Sviluppo",
@@ -78,15 +69,7 @@
                 "iconClasses": "",
                 "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-soluter-blue-500",
                 "paragraphs": [
-                    "Durante questa fase, gli",
-                    "sviluppatori scrivono il codice",
-                    "del software in base ai requisiti",
-                    "e al design stabiliti. Si utilizzano",
-                    "linguaggi di programmazione,",
-                    "framework e strumenti di",
-                    "sviluppo appropriati per",
-                    "realizzare le funzionalità del",
-                    "software."
+                    "Durante questa fase, gli sviluppatori scrivono il codice del software in base ai requisiti e al design stabiliti. Si utilizzano linguaggi di programmazione, framework e strumenti di sviluppo appropriati per realizzare le funzionalità del software."
                 ]
             },
             {
@@ -95,51 +78,25 @@
                 "iconClasses": "",
                 "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-soluter-red-500",
                 "paragraphs": [
-                    "Il software viene sottoposto a",
-                    "diversi test (test di unità, di",
-                    "integrazione, di sistema e di",
-                    "accettazione) per verificare che",
-                    "funzioni correttamente e che",
-                    "soddisfi i requisiti stabiliti. Tutti",
-                    "i problemi eventualmente",
-                    "identificati vengono risolti e il",
-                    "software viene nuovamente",
-                    "testato."
+                    "Il software viene sottoposto a diversi test (test di unità, di integrazione, di sistema e di accettazione) per verificare che funzioni correttamente e che soddisfi i requisiti stabiliti. Tutti i problemi eventualmente identificati vengono risolti e il software viene nuovamente testato."
                 ]
             },
             {
                 "title": "Release",
-                "icon": "purple-rectangle",
-                "iconClasses": "w-3",
-                "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-soluter-purple-500",
+                "icon": "black-rectangle-vertical",
+                "iconClasses": "w-3 mb-px",
+                "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-soluter-black",
                 "paragraphs": [
-                    "Dopo aver superato i test, il",
-                    "software viene rilasciato e",
-                    "distribuito agli utenti finali.",
-                    "Questa fase include la",
-                    "preparazione dei pacchetti di",
-                    "installazione, la configurazione",
-                    "dell'ambiente di produzione e la",
-                    "distribuzione del software."
+                    "Dopo aver superato i test, il software viene rilasciato e distribuito agli utenti finali. Questa fase include la preparazione dei pacchetti di installazione, la configurazione dell'ambiente di produzione e la distribuzione del software."
                 ]
             },
             {
                 "title": "Manutenzione e licenza",
-                "icon": "black-rectangle-vertical",
-                "iconClasses": "w-3",
-                "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-black",
+                "icon": "purple-rectangle",
+                "iconClasses": "w-3 mb-px",
+                "underlineClass": "underline-offset-[5px] underline decoration-[3px] decoration-offset-1 decoration-soluter-purple-500",
                 "paragraphs": [
-                    "Una volta rilasciato, il software",
-                    "richiede attività di",
-                    "manutenzione e supporto",
-                    "continuo: correzioni di bug,",
-                    "miglioramenti delle funzionalità",
-                    "esistenti, aggiornamenti di",
-                    "sicurezza e assistenza agli",
-                    "utenti per la risoluzione di",
-                    "problemi e, se necessario,",
-                    "l'implementazione di nuove",
-                    "funzionalità."
+                    "Una volta rilasciato, il software richiede attività di manutenzione e supporto continuo: correzioni di bug, miglioramenti delle funzionalità esistenti, aggiornamenti di sicurezza e assistenza agli utenti per la risoluzione di problemi e, se necessario, l'implementazione di nuove funzionalità."
                 ]
             }
         ]

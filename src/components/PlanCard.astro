@@ -17,27 +17,38 @@ interface Props {
 const props = Astro.props;
 ---
 
-<div class="w-[300px] lg:w-auto">
-  <div class="relative inline-flex h-8 items-end space-x-4">
-    <h2 class="font-bold leading-none">{props.name}</h2>
-    <Icon name={props.icon} class={twMerge("w-5", props.iconClasses)} />
-  </div>
+<details class="group rounded" open>
+  <summary
+    class="relative flex cursor-pointer list-none flex-wrap items-center justify-center rounded focus-visible:outline-none xl:justify-start"
+  >
+    <div
+      class="relative flex h-8 items-center justify-center space-x-4 lg:justify-normal"
+    >
+      <h3 class="font-bold xl:pl-6">{props.name}</h3>
+      <Icon name={props.icon} class={twMerge("w-5", props.iconClasses)} />
+    </div>
+    <div
+      class="ml-4 origin-left border-8 border-transparent
+    border-l-black transition-transform group-open:rotate-90"
+    >
+    </div>
+  </summary>
   {
     props.sections.map((section) => (
       <div class="mb-10 mt-10">
-        <div class="flex items-end space-x-3">
+        <div class="mx-auto flex items-end space-x-3 md:px-14 xl:px-7">
           <Icon
             name={section.icon}
             class={twMerge("-mb-[5px] w-4", section.iconClasses)}
           />
-          <p class={`${section.underlineClass} font-bold`}>{section.title}</p>
+          <h4 class={`${section.underlineClass} font-bold`}>{section.title}</h4>
         </div>
-        <div class="ml-6 mt-5">
+        <div class="ml-6 mt-5 md:px-14 lg:px-0 2xl:px-8">
           {section.paragraphs.map((paragraph) => (
-            <p class="whitespace-nowrap">{paragraph}</p>
+            <p class="">{paragraph}</p>
           ))}
         </div>
       </div>
     ))
   }
-</div>
+</details>

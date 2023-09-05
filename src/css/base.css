@@ -30,4 +30,17 @@
   .section-padding {
     @apply px-6 sm:px-24 md:px-24 xl:px-32 2xl:px-20;
   }
+
+  /* TO JE TO - TO JE TAJ */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::marker {
+    display: none;
+  }
+
+  /* svg {
+    transform-origin: top left;
+  } */
 }

@@ -19,6 +19,9 @@ module.exports = {
         "soluter-orange": {
           500: "#EE7838",
         },
+        "soluter-red": {
+          500: "#C22C3E",
+        },
       },
     },
   },

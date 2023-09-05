@@ -4,31 +4,61 @@ import { twMerge } from "tailwind-merge";
 
 interface Props {
   title: string;
+  underlinedWords: {
+    word: string;
+    class: string;
+  }[];
   paragraphs: string[];
 }
 
-const { title, paragraphs } = Astro.props;
+const { title, paragraphs, underlinedWords } = Astro.props;
 ---
 
 <details class="rounde group mb-4" open>
   <summary
-    class="relative flex cursor-pointer list-none flex-wrap
-    items-center rounded focus-visible:outline-none"
+    class="flex cursor-pointer list-none flex-wrap items-center rounded focus-visible:outline-none"
   >
     <div class="group flex flex-col">
       <div>
-        <h4 class="mb-1 items-center font-bold">{title}</h4>
-      </div>
-    </div>
-    <div class="flex w-10 items-center justify-center">
-      <div
-        class="ml-1 origin-left border-8 border-transparent
-        border-l-black transition-transform group-open:rotate-90"
-      >
+        <h4 class="mb-1 items-center font-bold">
+          {
+            title.split(" ").map((word) => {
+              const underlinedWord = underlinedWords.find(
+                (underlinedWord) => underlinedWord.word === word,
+              );
+
+              if (underlinedWord) {
+                return (
+                  <>
+                    <span
+                      class={twMerge(
+                        underlinedWord.class,
+                        "inline-block whitespace-nowrap",
+                      )}
+                      style="font-size: inherit;"
+                    >
+                      {word}
+                    </span>
+                  </>
+                );
+              }
+
+              return `${word} `;
+            })
+          }
+          <Icon
+            name="caret"
+            class="ml-1 inline-block h-4 w-4 -rotate-90 transition-transform group-open:rotate-0"
+          />
+        </h4>
       </div>
     </div>
   </summary>
-  <p>
-    {paragraphs.map((paragraph) => <p class=" text-start">{paragraph}</p>)}
-  </p>
+  <div class="mt-4">
+    {
+      paragraphs.map((paragraph) => (
+        <p class="text-start" set:html={paragraph} />
+      ))
+    }
+  </div>
 </details>

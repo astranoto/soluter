@@ -7,9 +7,11 @@ import plans from "../resources/plans.json";
 import TargetMarket from "../components/TargetMarket.astro";
 import whatWeOffer from "../resources/what-we-offer.json";
 import faqs from "../resources/faq.json";
+import whoWeAre from "../resources/who-we-are.json";
 import TargetFaq from "../components/TargetFaq.astro";
 import PlanCard from "../components/PlanCard.astro";
 import WhatWeOfferCard from "../components/WhatWeOfferCard.astro";
+import WhoWeAreCard from "../components/WhoWeAreCard.astro";
 ---
 
 <Layout title="Soluter.">
@@ -223,6 +225,87 @@ import WhatWeOfferCard from "../components/WhatWeOfferCard.astro";
         class="btn mt-12 bg-soluter-blue-500 px-8 py-1 text-white hover:bg-soluter-blue-500/90"
         >Chiamaci!</a
       >
+    </section>
+    <div class="relative mt-24">
+      <Icon
+        name="blocks/tree"
+        class="absolute -top-[6.615rem] left-12 w-16 sm:left-16 2xl:left-96"
+      />
+      <Icon
+        name="green-rectangle-vertical"
+        class="absolute -top-[1.8rem] left-36 h-8 sm:left-36 2xl:left-[32rem]"
+      />
+      <Icon
+        name="red-rectangle"
+        class="absolute -top-[.8rem] right-40 h-4 lg:right-64"
+      />
+      <hr class="w-full border-0 border-b-4 border-black" />
+    </div>
+    <section class="section-padding mt-20 flex flex-col items-center">
+      <div class="relative">
+        <h3 class="px-4 text-center font-bold sm:px-10 lg:px-14 2xl:px-52">
+          Testimonianze
+        </h3>
+        <h3 class="mt-4 px-4 text-center sm:px-10 lg:px-14 2xl:px-52">
+          Cerchi anche tu una soluzione personalizzata?
+        </h3>
+      </div>
+      <a
+        href="tel:todo"
+        class="btn mt-12 bg-soluter-green-500 px-6 py-1 text-white hover:bg-soluter-green-500/90"
+        >Scrivici per <br /> parlarne!</a
+      >
+    </section>
+    <div class="relative mt-24">
+      <Icon
+        name="blocks/tree"
+        class="absolute -top-[6.615rem] left-12 w-16 sm:left-16 2xl:left-96"
+      />
+      <Icon
+        name="green-rectangle-vertical"
+        class="absolute -top-[1.8rem] left-36 h-8 sm:left-36 2xl:left-[32rem]"
+      />
+      <Icon
+        name="red-rectangle"
+        class="absolute -top-[.8rem] right-40 h-4 lg:right-64"
+      />
+      <hr class="w-full border-0 border-b-4 border-black" />
+    </div>
+    <section class="section-padding mt-20 flex flex-col items-center">
+      <div class="relative">
+        <Icon
+          name="blocks/creative-tech-makers"
+          class="absolute -left-12 -top-2 h-12"
+        />
+        <h3 class="px-4 text-center font-bold sm:px-10 lg:px-14 2xl:px-52">
+          Siamo creative technology makers.
+        </h3>
+      </div>
+      <div
+        class="just mt-16 flex flex-col items-center space-y-12 xl:grid xl:grid-cols-3 xl:items-baseline xl:gap-16 xl:space-y-0"
+      >
+        {
+          whoWeAre.map((item) => (
+            <WhoWeAreCard
+              title={item.title}
+              icon={item.icon}
+              iconClasses={item.iconClasses}
+              subicon={item.subicon}
+              subiconClasses={item.subiconClasses}
+              paragraphs={item.paragraphs}
+            />
+          ))
+        }
+      </div>
+      <div class="mt-20 flex flex-col items-center justify-center space-y-8">
+        <h3 class="">Siamo quelli di Astranoto: se vuoi saperne di più,</h3>
+        <a
+          href="https://astranoto.com"
+          class="btn mt-8 bg-soluter-orange-500 px-6 py-1 text-center text-white hover:bg-soluter-orange-500/90"
+        >
+          Guarda<br /> qui!
+        </a>
+      </div>
     </section>
     <div class="relative mt-24">
       <Icon

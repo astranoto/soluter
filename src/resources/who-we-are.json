@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Siamo giovani e 100% nativi digitali",
+        "icon": "blocks/young-and-digital",
+        "iconClasses": "h-14",
+        "subicon": "blue-rectangle-horizontal",
+        "subiconClasses": "w-8",
+        "paragraphs": [
+            "Un team giovane e trasversale: uomini e donne con competenze diverse che vanno all'ingegneria, alla fisica, al management e al design, con l'obiettivo di semplificare, digitalizzare, includere."
+        ]
+    },
+    {
+        "title": "Siamo attenti al mondo che ci circonda",
+        "icon": "blocks/world-awareness",
+        "iconClasses": "h-14",
+        "subicon": "green-rectangle",
+        "subiconClasses": "w-6",
+        "paragraphs": [
+            "Vogliamo dare il nostro contributo per diffondere una mentalità aperta al cambiamento, alla reinvenzione ciclica e alla multidisciplinarità.Siamo una società benefit perché integriamo le responsabilità sociali ed ecologiche nelle nostre attività, coltiviamo consapevolezza all'autodeterminazione, coraggio e un pragmatico ottimismo verso il futuro."
+        ]
+    },
+    {
+        "title": "Siamo pronti a tutto",
+        "icon": "blocks/ready-for-everything",
+        "iconClasses": "h-14",
+        "subicon": "orange-square",
+        "subiconClasses": "w-4",
+        "paragraphs": [
+            "Supportiamo aziende, startup, PA e organizzazioni non-profit in un percorso di trasformazione digitale attraverso la tecnologia, creando sistemi e prototipi per aiutare le persone e le organizzazioni a migliorare i processi."
+        ]
+    }
+]

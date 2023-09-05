@@ -19,7 +19,7 @@
   }
 
   .btn {
-    @apply border-4 border-black text-[30px] focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:text-[26px] md:text-[30px];
+    @apply border-4 border-black text-[30px] font-bold focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 sm:text-[26px] md:text-[30px];
   }
 
   /* testo normale */

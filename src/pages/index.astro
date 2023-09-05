@@ -326,18 +326,13 @@ import WhoWeAreCard from "../components/WhoWeAreCard.astro";
     <section class="section-padding mt-16 grid grid-rows-1 justify-center">
       <Icon name="blocks/question" class="item-center h-12" />
       <div class="items-center gap-0">
-        <h3 class="text-center font-bold">
+        <h3 class="text-center font-bold sm:px-10 lg:px-14 2xl:px-52">
           Queste sono alcune delle domande più frequenti che ci vengono poste
-          dai
-        </h3>
-        <h3 class="mt-[10px] text-center font-bold">
-          nostri clienti: se non trovi la risposta alla tua esigenza,
-        </h3>
-        <h3 class="text-size[30px] mt-[10px] text-center font-bold">
+          dai nostri clienti: se non trovi la risposta alla tua esigenza,
           chiamaci per parlarne insieme!
         </h3>
       </div>
-      <div class="mt-16 flex flex-col space-y-16 2xl:px-36">
+      <div class="mt-24 flex flex-col space-y-16 2xl:px-36">
         {
           faqs.map((faq) => (
             <TargetFaq

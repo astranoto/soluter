@@ -14,44 +14,42 @@ interface Props {
 const { title, paragraphs, underlinedWords } = Astro.props;
 ---
 
-<details class="rounde group mb-4" open>
+<details class="rounde group mb-4">
   <summary
     class="flex cursor-pointer list-none flex-wrap items-center rounded focus-visible:outline-none"
   >
     <div class="group flex flex-col">
-      <div>
-        <h4 class="mb-1 items-center font-bold">
-          {
-            title.split(" ").map((word) => {
-              const underlinedWord = underlinedWords.find(
-                (underlinedWord) => underlinedWord.word === word,
+      <h4 class="mb-1 items-center font-bold">
+        {
+          title.split(" ").map((word) => {
+            const underlinedWord = underlinedWords.find(
+              (underlinedWord) => underlinedWord.word === word,
+            );
+
+            if (underlinedWord) {
+              return (
+                <>
+                  <span
+                    class={twMerge(
+                      underlinedWord.class,
+                      "inline-block whitespace-nowrap",
+                    )}
+                    style="font-size: inherit;"
+                  >
+                    {word}
+                  </span>
+                </>
               );
+            }
 
-              if (underlinedWord) {
-                return (
-                  <>
-                    <span
-                      class={twMerge(
-                        underlinedWord.class,
-                        "inline-block whitespace-nowrap",
-                      )}
-                      style="font-size: inherit;"
-                    >
-                      {word}
-                    </span>
-                  </>
-                );
-              }
-
-              return `${word} `;
-            })
-          }
-          <Icon
-            name="caret"
-            class="ml-1 inline-block h-4 w-4 -rotate-90 transition-transform group-open:rotate-0"
-          />
-        </h4>
-      </div>
+            return `${word} `;
+          })
+        }
+        <Icon
+          name="caret"
+          class="ml-1 inline-block h-4 w-4 -rotate-90 transition-transform group-open:rotate-0"
+        />
+      </h4>
     </div>
   </summary>
   <div class="mt-4">

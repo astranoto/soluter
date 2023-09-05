@@ -18,7 +18,7 @@ const { title, paragraphs, underlinedWords } = Astro.props;
   <summary
     class="flex cursor-pointer list-none flex-wrap items-center rounded focus-visible:outline-none"
   >
-    <div class="group flex flex-col">
+    <div class="group flex items-center justify-between">
       <h4 class="mb-1 items-center font-bold">
         {
           title.split(" ").map((word) => {
@@ -45,11 +45,13 @@ const { title, paragraphs, underlinedWords } = Astro.props;
             return `${word} `;
           })
         }
+      </h4>
+      <div>
         <Icon
           name="caret"
-          class="ml-1 inline-block h-4 w-4 -rotate-90 transition-transform group-open:rotate-0"
+          class="ml-1 inline-block h-4 w-4 transition-transform group-open:-rotate-180"
         />
-      </h4>
+      </div>
     </div>
   </summary>
   <div class="mt-4">

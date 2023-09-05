@@ -21,16 +21,20 @@ const props = Astro.props;
   <summary
     class="relative flex cursor-pointer list-none flex-wrap items-center justify-center rounded focus-visible:outline-none xl:justify-start"
   >
-    <div
-      class="relative flex h-8 items-center justify-center space-x-4 lg:justify-normal"
-    >
-      <h3 class="font-bold xl:pl-6">{props.name}</h3>
-      <Icon name={props.icon} class={twMerge("w-5", props.iconClasses)} />
+    <div class="flex items-center justify-between">
+      <div
+        class="relative flex h-8 items-center justify-center space-x-4 lg:justify-normal"
+      >
+        <h3 class="font-bold xl:pl-6">{props.name}</h3>
+        <Icon name={props.icon} class={twMerge("w-5", props.iconClasses)} />
+      </div>
+      <div>
+        <Icon
+          name="caret"
+          class="ml-2 inline-block h-4 w-4 transition-transform group-open:-rotate-180"
+        />
+      </div>
     </div>
-    <Icon
-      name="caret"
-      class="ml-1 inline-block h-4 w-4 -rotate-90 transition-transform group-open:rotate-0"
-    />
   </summary>
   {
     props.sections.map((section) => (

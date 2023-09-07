@@ -1,4 +1,5 @@
 ---
+import { SEO } from "astro-seo";
 import "./../css/base.css";
 
 interface Props {
@@ -11,10 +12,55 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en" class="overflow-x-hidden">
   <head>
+    <SEO
+      description="Il software 100% custom."
+      openGraph={{
+        basic: {
+          title: "Soluter - Il software 100% custom.",
+          type: "website",
+          image: "",
+        },
+        optional: {
+          locale: "it_IT",
+          localeAlternate: ["en_US"],
+        },
+      }}
+      extend={{
+        link: [
+          {
+            rel: "icon",
+            href: "/favicon.svg",
+          },
+        ],
+        meta: [
+          {
+            name: "twitter:image",
+            content:
+              "https://pbs.twimg.com/profile_images/1498241705534967808/YcfEhVx-_400x400.jpg",
+          },
+          { name: "twitter:title", content: "Astranoto" },
+          {
+            name: "twitter:description",
+            content: "Creative technology makers",
+          },
+          {
+            name: "linkedin:image",
+            content:
+              "https://media.licdn.com/dms/image/C4E0BAQGhevkd8nToyA/company-logo_200_200/0/1645629624385?e=2147483647&v=beta&t=OCIPLYJwKbOPf3wwkC-5VEEm5fBmprPhdrsAerzhIL4",
+          },
+          {
+            name: "linkedin:title",
+            content: "Astranoto",
+          },
+          {
+            name: "linkedin:description",
+            content: "Creative technology makers",
+          },
+        ],
+      }}
+    />
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,10 +72,10 @@ const { title } = Astro.props;
   </head>
   <body class="overflow-x-hidden">
     <slot />
+    <style is:global>
+      html {
+        font-family: "Barlow", sans-serif;
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  html {
-    font-family: "Barlow", sans-serif;
-  }
-</style>

@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 import { twMerge } from "tailwind-merge";
+import Collapse from "./Collapse.astro";
 interface Props {
   name: string;
   icon: string;
@@ -17,41 +18,34 @@ interface Props {
 const props = Astro.props;
 ---
 
-<details class="group rounded">
-  <summary
-    class="relative flex cursor-pointer list-none flex-wrap items-center justify-center rounded focus-visible:outline-none xl:justify-start"
+<Collapse containerClass="w-full">
+  <div
+    class="relative flex h-8 w-full items-center justify-center space-x-4 xl:justify-normal"
+    slot="title"
   >
-    <div class="flex items-center justify-between">
-      <div
-        class="relative flex h-8 items-center justify-center space-x-4 lg:justify-normal"
-      >
-        <h3 class="font-bold xl:pl-6">{props.name}</h3>
-        <Icon name={props.icon} class={twMerge("w-5", props.iconClasses)} />
-      </div>
-      <div>
-        <Icon
-          name="caret"
-          class="ml-2 inline-block h-4 w-4 transition-transform group-open:-rotate-180"
-        />
-      </div>
-    </div>
-  </summary>
-  {
-    props.sections.map((section) => (
-      <div class="mb-10 mt-10">
-        <div class="mx-auto flex items-end space-x-3 md:px-14 xl:px-7">
-          <Icon
-            name={section.icon}
-            class={twMerge("-mb-[5px] w-4", section.iconClasses)}
-          />
-          <h4 class={`${section.underlineClass} font-bold`}>{section.title}</h4>
+    <h3 class="font-bold xl:pl-6" set:html={props.name} />
+    <Icon name={props.icon} class={twMerge("w-5", props.iconClasses)} />
+  </div>
+  <div slot="content">
+    {
+      props.sections.map((section) => (
+        <div class="mb-10 mt-10">
+          <div class="mx-auto flex items-end space-x-3 md:px-14 xl:px-7">
+            <Icon
+              name={section.icon}
+              class={twMerge("-mb-[5px] w-4", section.iconClasses)}
+            />
+            <h4 class={`${section.underlineClass} font-bold`}>
+              {section.title}
+            </h4>
+          </div>
+          <div class="ml-6 mt-5 md:px-14 lg:px-0 2xl:px-8">
+            {section.paragraphs.map((paragraph) => (
+              <p class="">{paragraph}</p>
+            ))}
+          </div>
         </div>
-        <div class="ml-6 mt-5 md:px-14 lg:px-0 2xl:px-8">
-          {section.paragraphs.map((paragraph) => (
-            <p class="">{paragraph}</p>
-          ))}
-        </div>
-      </div>
-    ))
-  }
-</details>
+      ))
+    }
+  </div>
+</Collapse>

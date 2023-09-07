@@ -41,7 +41,7 @@
         ]
     },
     {
-        "name": "FULL - mensile, min. 12 mesi",
+        "name": "FULL - mensile,<br class=\"xl:hidden\" /> min. 12 mesi",
         "icon": "plans/full-plan",
         "iconClasses": "w-10 mt-7",
         "sections": [

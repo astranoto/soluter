@@ -4,11 +4,11 @@
         "underlinedWords": [
             {
                 "word": "design",
-                "class": "underline decoration-[3px] decoration-soluter-orange-500"
+                "class": "underline decoration-[4px] decoration-soluter-orange-500"
             },
             {
                 "word": "software",
-                "class": "underline decoration-[3px] decoration-soluter-orange-500"
+                "class": "underline decoration-[4px] decoration-soluter-orange-500"
             }
         ],
         "paragraphs": [
@@ -20,7 +20,7 @@
         "underlinedWords": [
             {
                 "word": "funzionalità",
-                "class": "underline decoration-[3px] decoration-soluter-green-500"
+                "class": "underline decoration-[4px] decoration-soluter-green-500"
             }
         ],
         "paragraphs": [
@@ -32,11 +32,11 @@
         "underlinedWords": [
             {
                 "word": "funzionalità",
-                "class": "underline decoration-[3px] decoration-soluter-green-500"
+                "class": "underline decoration-[4px] decoration-soluter-green-500"
             },
             {
                 "word": "software",
-                "class": "underline decoration-[3px] decoration-soluter-red-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             }
         ],
         "paragraphs": [
@@ -48,11 +48,11 @@
         "underlinedWords": [
             {
                 "word": "funzionalità",
-                "class": "underline decoration-[3px] decoration-soluter-green-500"
+                "class": "underline decoration-[4px] decoration-soluter-green-500"
             },
             {
                 "word": "software",
-                "class": "underline decoration-[3px] decoration-soluter-red-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             }
         ],
         "paragraphs": [
@@ -64,7 +64,7 @@
         "underlinedWords": [
             {
                 "word": "funzionalità",
-                "class": "underline decoration-[3px] decoration-soluter-green-500"
+                "class": "underline decoration-[4px] decoration-soluter-green-500"
             }
         ],
         "paragraphs": [
@@ -76,11 +76,11 @@
         "underlinedWords": [
             {
                 "word": "funzionalità",
-                "class": "underline decoration-[3px] decoration-soluter-green-500"
+                "class": "underline decoration-[4px] decoration-soluter-green-500"
             },
             {
                 "word": "software",
-                "class": "underline decoration-[3px] decoration-soluter-red-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             }
         ],
         "paragraphs": [
@@ -92,7 +92,7 @@
         "underlinedWords": [
             {
                 "word": "funzionalità",
-                "class": "underline decoration-[3px] decoration-soluter-green-500"
+                "class": "underline decoration-[4px] decoration-soluter-green-500"
             }
         ],
         "paragraphs": [
@@ -111,7 +111,7 @@
         "underlinedWords": [
             {
                 "word": "software",
-                "class": "underline decoration-[3px] decoration-soluter-red-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             }
         ],
         "paragraphs": [
@@ -123,7 +123,7 @@
         "underlinedWords": [
             {
                 "word": "funzionalità",
-                "class": "underline decoration-[3px] decoration-soluter-green-500"
+                "class": "underline decoration-[4px] decoration-soluter-green-500"
             }
         ],
         "paragraphs": [
@@ -135,11 +135,11 @@
         "underlinedWords": [
             {
                 "word": "startup",
-                "class": "underline decoration-[3px] decoration-soluter-purple-500"
+                "class": "underline decoration-[4px] decoration-soluter-purple-500"
             },
             {
                 "word": "software",
-                "class": "underline decoration-[3px] decoration-soluter-red-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             }
         ],
         "paragraphs": [
@@ -151,11 +151,11 @@
         "underlinedWords": [
             {
                 "word": "startup",
-                "class": "underline decoration-[3px] decoration-soluter-red-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             },
             {
                 "word": "software",
-                "class": "underline decoration-[3px] decoration-soluter-purple-500"
+                "class": "underline decoration-[4px] decoration-soluter-purple-500"
             }
         ],
         "paragraphs": [
@@ -167,11 +167,11 @@
         "underlinedWords": [
             {
                 "word": "startup",
-                "class": "underline decoration-[3px] decoration-soluter-purple-500"
+                "class": "underline decoration-[4px] decoration-soluter-purple-500"
             },
             {
                 "word": "software",
-                "class": "underline decoration-[3px] decoration-soluter-red-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             }
         ],
         "paragraphs": [
@@ -183,7 +183,7 @@
         "underlinedWords": [
             {
                 "word": "tecnologie",
-                "class": "underline decoration-[3px] decoration-soluter-blue-500"
+                "class": "underline decoration-[4px] decoration-soluter-blue-500"
             }
         ],
         "paragraphs": [
@@ -195,11 +195,11 @@
         "underlinedWords": [
             {
                 "word": "startup",
-                "class": "underline decoration-[3px] decoration-soluter-purple-500"
+                "class": "underline decoration-[4px] decoration-soluter-purple-500"
             },
             {
                 "word": "software",
-                "class": "underline decoration-[3px] decoration-soluter-red-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             }
         ],
         "paragraphs": [
@@ -211,11 +211,11 @@
         "underlinedWords": [
             {
                 "word": "startup",
-                "class": "underline decoration-[3px] decoration-soluter-purple-500"
+                "class": "underline decoration-[4px] decoration-soluter-purple-500"
             },
             {
                 "word": "software",
-                "class": "underline decoration-[3px] decoration-soluter-red-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             }
         ],
         "paragraphs": [
@@ -227,7 +227,7 @@
         "underlinedWords": [
             {
                 "word": "software",
-                "class": "underline decoration-[3px] decoration-soluter-red-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             }
         ],
         "paragraphs": [
@@ -239,7 +239,7 @@
         "underlinedWords": [
             {
                 "word": "startup",
-                "class": "underline decoration-[3px] decoration-soluter-purple-500"
+                "class": "underline decoration-[4px] decoration-soluter-purple-500"
             }
         ],
         "paragraphs": [
@@ -251,11 +251,11 @@
         "underlinedWords": [
             {
                 "word": "startup",
-                "class": "underline decoration-[3px] decoration-soluter-red-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             },
             {
                 "word": "software",
-                "class": "underline decoration-[3px] decoration-soluter-purple-500"
+                "class": "underline decoration-[4px] decoration-soluter-purple-500"
             }
         ],
         "paragraphs": [
@@ -267,7 +267,7 @@
         "underlinedWords": [
             {
                 "word": "abbonamento",
-                "class": "underline decoration-[3px] decoration-black"
+                "class": "underline decoration-[4px] decoration-black"
             }
         ],
         "paragraphs": [

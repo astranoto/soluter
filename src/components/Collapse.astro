@@ -9,7 +9,156 @@ interface Props {
 const props = Astro.props;
 ---
 
-<details class={twMerge("group rounded", props.containerClass)}>
+<script>
+  class Accordion {
+    el: HTMLDetailsElement;
+    summary: HTMLElement;
+    content: HTMLElement;
+    animation: Animation | null;
+    isClosing: boolean;
+    isExpanding: boolean;
+
+    constructor(el: HTMLDetailsElement) {
+      // Store the <details> element
+      this.el = el;
+      // Store the <summary> element
+      this.summary = el.querySelector("summary")!;
+      // Store the <div class="content"> element
+      this.content = el.querySelector(".content")!;
+
+      // Store the animation object (so we can cancel it if needed)
+      this.animation = null;
+      // Store if the element is closing
+      this.isClosing = false;
+      // Store if the element is expanding
+      this.isExpanding = false;
+      // Detect user clicks on the summary element
+      this.summary.addEventListener("click", (e) => this.onClick(e));
+    }
+
+    onClick(e: Event) {
+      // Stop default behaviour from the browser
+      e.preventDefault();
+      // Add an overflow on the <details> to avoid content overflowing
+      this.el.style.overflow = "hidden";
+      // Check if the element is being closed or is already closed
+      if (this.isClosing || !this.el.open) {
+        this.open();
+        // Check if the element is being openned or is already open
+      } else if (this.isExpanding || this.el.open) {
+        this.shrink();
+      }
+    }
+
+    shrink() {
+      // Set the element as "being closed"
+      this.isClosing = true;
+
+      // Store the current height of the element
+      const startHeight = `${this.el.offsetHeight}px`;
+      // Calculate the height of the summary
+      const endHeight = `${this.getElementHeight(this.summary)}px`;
+
+      // If there is already an animation running
+      if (this.animation) {
+        // Cancel the current animation
+        this.animation.cancel();
+      }
+
+      // Start a WAAPI animation
+      this.animation = this.el.animate(
+        {
+          // Set the keyframes from the startHeight to endHeight
+          height: [startHeight, endHeight],
+        },
+        {
+          duration: 300,
+          easing: "ease-out",
+        },
+      );
+
+      // When the animation is complete, call onAnimationFinish()
+      this.animation.onfinish = () => this.onAnimationFinish(false);
+      // If the animation is cancelled, isClosing variable is set to false
+      this.animation.oncancel = () => (this.isClosing = false);
+    }
+
+    getElementHeight(el: HTMLElement) {
+      // Get the height of the element
+      const height = el.offsetHeight;
+      // Get the computed styles of the element
+      const styles = window.getComputedStyle(el);
+      // Extract the padding-top and padding-bottom values
+
+      const margin =
+        parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
+
+      // Return the total height of the element
+      return height + margin;
+    }
+
+    open() {
+      // Apply a fixed height on the element
+      this.el.style.height = `${this.el.offsetHeight}px`;
+      // Force the [open] attribute on the details element
+      this.el.open = true;
+      // Wait for the next frame to call the expand function
+      window.requestAnimationFrame(() => this.expand());
+    }
+
+    expand() {
+      // Set the element as "being expanding"
+      this.isExpanding = true;
+      // Get the current fixed height of the element
+      const startHeight = `${this.el.offsetHeight}px`;
+      // Calculate the open height of the element (summary height + content height)
+      const endHeight = `${
+        this.getElementHeight(this.summary) +
+        this.getElementHeight(this.content)
+      }px`;
+
+      // If there is already an animation running
+      if (this.animation) {
+        // Cancel the current animation
+        this.animation.cancel();
+      }
+
+      // Start a WAAPI animation
+      this.animation = this.el.animate(
+        {
+          // Set the keyframes from the startHeight to endHeight
+          height: [startHeight, endHeight],
+        },
+        {
+          duration: 300,
+          easing: "ease-out",
+        },
+      );
+      // When the animation is complete, call onAnimationFinish()
+      this.animation.onfinish = () => this.onAnimationFinish(true);
+      // If the animation is cancelled, isExpanding variable is set to false
+      this.animation.oncancel = () => (this.isExpanding = false);
+    }
+
+    onAnimationFinish(open: boolean) {
+      // Set the open attribute based on the parameter
+      this.el.open = open;
+      // Clear the stored animation
+      this.animation = null;
+      // Reset isClosing & isExpanding
+      this.isClosing = false;
+      this.isExpanding = false;
+      // Remove the overflow hidden and the fixed height
+      this.el.style.height = this.el.style.overflow = "";
+    }
+  }
+
+  window.document.querySelectorAll("details").forEach((el) => {
+    new Accordion(el);
+  });
+</script>
+
+<details id="" class={twMerge("group rounded", props.containerClass)}>
   <summary
     class="flex cursor-pointer list-none flex-wrap items-center rounded focus-visible:outline-none"
   >
@@ -18,12 +167,12 @@ const props = Astro.props;
       <div class="ml-2">
         <Icon
           name="caret"
-          class="inline-block h-4 w-4 transition-transform group-open:-rotate-180"
+          class="inline-block h-4 w-4 transition-transform duration-300 group-open:-rotate-180"
         />
       </div>
     </div>
   </summary>
-  <div class="mt-4">
+  <div class="content mt-4">
     <slot name="content" />
   </div>
 </details>

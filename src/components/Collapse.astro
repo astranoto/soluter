@@ -1,0 +1,29 @@
+---
+import { Icon } from "astro-icon";
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+  containerClass?: string;
+}
+
+const props = Astro.props;
+---
+
+<details class={twMerge("group rounded", props.containerClass)}>
+  <summary
+    class="flex cursor-pointer list-none flex-wrap items-center rounded focus-visible:outline-none"
+  >
+    <div class="group flex w-full items-center justify-between">
+      <slot name="title" />
+      <div class="ml-2">
+        <Icon
+          name="caret"
+          class="inline-block h-4 w-4 transition-transform group-open:-rotate-180"
+        />
+      </div>
+    </div>
+  </summary>
+  <div class="mt-4">
+    <slot name="content" />
+  </div>
+</details>

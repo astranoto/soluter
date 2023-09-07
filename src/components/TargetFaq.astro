@@ -1,6 +1,6 @@
 ---
-import { Icon } from "astro-icon";
 import { twMerge } from "tailwind-merge";
+import Collapse from "./Collapse.astro";
 
 interface Props {
   title: string;
@@ -14,51 +14,39 @@ interface Props {
 const { title, paragraphs, underlinedWords } = Astro.props;
 ---
 
-<details class="rounde group">
-  <summary
-    class="flex cursor-pointer list-none flex-wrap items-center rounded focus-visible:outline-none"
-  >
-    <div class="group flex items-center justify-between">
-      <h4 class="mb-1 items-center font-bold">
-        {
-          title.split(" ").map((word) => {
-            const underlinedWord = underlinedWords.find(
-              (underlinedWord) => underlinedWord.word === word,
-            );
+<Collapse>
+  <h4 class="mb-1 items-center font-bold" slot="title">
+    {
+      title.split(" ").map((word) => {
+        const underlinedWord = underlinedWords.find(
+          (underlinedWord) => underlinedWord.word === word,
+        );
 
-            if (underlinedWord) {
-              return (
-                <>
-                  <span
-                    class={twMerge(
-                      underlinedWord.class,
-                      "inline-block whitespace-nowrap",
-                    )}
-                    style="font-size: inherit;"
-                  >
-                    {word}
-                  </span>
-                </>
-              );
-            }
-
-            return `${word} `;
-          })
+        if (underlinedWord) {
+          return (
+            <>
+              <span
+                class={twMerge(
+                  underlinedWord.class,
+                  "inline-block whitespace-nowrap",
+                )}
+                style="font-size: inherit;"
+              >
+                {word}
+              </span>
+            </>
+          );
         }
-      </h4>
-      <div>
-        <Icon
-          name="caret"
-          class="ml-1 inline-block h-4 w-4 transition-transform group-open:-rotate-180"
-        />
-      </div>
-    </div>
-  </summary>
-  <div class="mt-4">
+
+        return `${word} `;
+      })
+    }
+  </h4>
+  <div slot="content">
     {
       paragraphs.map((paragraph) => (
         <p class="text-start" set:html={paragraph} />
       ))
     }
   </div>
-</details>
+</Collapse>

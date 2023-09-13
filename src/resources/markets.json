@@ -40,9 +40,13 @@
     ]
   },
   {
-    "title": "Pubblica Amministrazione",
+    "title": "PA",
     "icon": "blocks/public",
     "subtitle": "Coming soon!",
-    "paragraphs": []
+    "paragraphs": [
+      [
+        "Ci stiamo attrezzando per sviluppare soluzioni personalizzate per la Pubblica Amministrazione, per qualsiasi domanda contattaci."
+      ]
+    ]
   }
 ]

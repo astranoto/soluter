@@ -2,12 +2,12 @@
 import { Icon } from "astro-icon";
 ---
 
-<footer class="border-[5px] rounded border-solid border-black xl:h-[366px]">
+<footer class="rounded border-[5px] border-solid border-black 2xl:h-[366px]">
   <div
-    class="grid grid-cols-2 gap-2 xl:mt-[140px] xl:grid-cols-7 xl:grid-rows-1"
+    class="grid grid-cols-2 items-center justify-center gap-2 p-8 2xl:grid-cols-7 2xl:grid-rows-1 2xl:p-10"
   >
     <div
-      class="col-span-2 mt-8 flex flex-col items-center sm:ml-2 xl:ml-[90px] xl:mt-0 xl:items-start"
+      class="col-span-2 mt-8 flex flex-col items-center sm:ml-2 2xl:mt-0 2xl:items-start"
     >
       <div class="flex items-end">
         <Icon name="logo" class="flex h-[42px] w-[241px] shrink" />
@@ -15,62 +15,60 @@ import { Icon } from "astro-icon";
           <Icon name="blocks/box" width="36" height="35" class="shrink" />
         </div>
       </div>
-      <div class="mt-1">
+      <div class="mt-2">
         <p class="text-[18px]">Il software 100% custom</p>
       </div>
     </div>
 
     <div class="col-span-2 grid grid-cols-2 gap-2 sm:col-span-3 sm:grid-cols-3">
       <div class="flex flex-col items-center">
-        <p class="text-[14px] xl:mt-0">Risorse</p>
-        <p class="text-[11px] xl:mt-[17px]">Guida</p>
-        <p class="text-[11px]">FAQ</p>
-        <p class="text-[11px]">Supporto</p>
+        <p class="font-bold 2xl:mt-0">Risorse</p>
+        <p class="2xl:mt-[17px]">Guida</p>
+        <p class="">FAQ</p>
+        <p class="">Supporto</p>
       </div>
 
       <div class="flex flex-col items-center">
-        <p class="text-[14px] xl:mt-0">Informative</p>
-        <p class="text-[11px] xl:mt-[17px]">Cookie Policy</p>
-        <p class="text-[11px]">Privacy policy</p>
-        <p class="text-[11px]">Misure di sicurezza</p>
+        <p class="font-bold 2xl:mt-0">Informative</p>
+        <p class="2xl:mt-[17px]">Cookie Policy</p>
+        <p class="">Privacy policy</p>
+        <p class="">Misure di sicurezza</p>
       </div>
 
       <div
         class="col-span-2 mt-2 flex flex-col items-center sm:col-span-1 md:mt-0"
       >
-        <div class="mt-1 flex sm:mt-0 xl:flex-row">
-          <p class="mr-2 text-[14px] xl:mr-[36px]">Seguici su</p>
+        <div class="mt-1 flex sm:mt-0 2xl:flex-row">
+          <p class="mr-2 font-bold 2xl:mr-[36px]">Seguici su</p>
           <Icon
             name="facebook"
             width="20"
             height="20"
-            class="mr-2 xl:mr-[17px]"
+            class="mr-2 2xl:mr-[17px]"
           />
           <Icon name="instagram" width="20" height="20" />
         </div>
-        <p class="text-[14px] xl:mt-[36px]">Contattaci!</p>
-        <p class="text-[11px]">info@soluter.it</p>
+        <p class="font-bold 2xl:mt-[36px]">Contattaci!</p>
+        <p class="">info@soluter.it</p>
       </div>
     </div>
 
     <!-- <div
-    class="grid grid-cols-2 gap-2 xl:mt-[140px] xl:grid-cols-7 xl:grid-rows-1"
+    class="grid grid-cols-2 gap-2 2xl:mt-[140px] 2xl:grid-cols-7 2xl:grid-rows-1"
   > -->
-    <div class="col-span-2 flex flex-col items-center xl:col-span-1">
-      <p class="col-span-2 mt-4 text-[14px] xl:mt-0">SOLUTER.IT</p>
-      <p class="text-[11px]">sviluppato con amore da</p>
+    <div class="col-span-2 flex flex-col items-center 2xl:col-span-1">
+      <p class="col-span-2 mt-4 font-bold 2xl:mt-0">SOLUTER.IT</p>
+      <p class="">sviluppato con amore da</p>
 
-      <Icon name="facebook" width="213" height="75" class="mt-4" />
+      <Icon name="logo-astranoto" width="213" height="75" class="mt-4" />
     </div>
 
     <div
-      class="col-span-2 flex flex-col items-center xl:col-span-1 xl:mt-8 xl:items-start"
+      class="col-span-2 flex flex-col items-center 2xl:col-span-1 2xl:mt-8 2xl:items-start"
     >
-      <p class="mt-2 text-[10px] xl:mt-0">
-        Astranoto Srl Società Benefit © 2022
-      </p>
-      <p class="text-[10px]">Made in Bologna, Italy</p>
-      <p class="text-[10px]">All rights reserved – P.IVA 3990791208</p>
+      <p class="mt-2 text-sm 2xl:mt-0">Astranoto Srl Società Benefit © 2022</p>
+      <p class="text-sm">Made in Bologna, Italy</p>
+      <p class="text-sm">All rights reserved - P.IVA 3990791208</p>
     </div>
   </div>
 </footer>

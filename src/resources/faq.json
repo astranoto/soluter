@@ -8,7 +8,7 @@
             },
             {
                 "word": "software",
-                "class": "underline decoration-[4px] decoration-soluter-orange-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             }
         ],
         "paragraphs": [
@@ -151,11 +151,11 @@
         "underlinedWords": [
             {
                 "word": "startup",
-                "class": "underline decoration-[4px] decoration-soluter-red-500"
+                "class": "underline decoration-[4px] decoration-soluter-purple-500"
             },
             {
                 "word": "software",
-                "class": "underline decoration-[4px] decoration-soluter-purple-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             }
         ],
         "paragraphs": [
@@ -251,11 +251,11 @@
         "underlinedWords": [
             {
                 "word": "startup",
-                "class": "underline decoration-[4px] decoration-soluter-red-500"
+                "class": "underline decoration-[4px] decoration-soluter-purple-500"
             },
             {
                 "word": "software",
-                "class": "underline decoration-[4px] decoration-soluter-purple-500"
+                "class": "underline decoration-[4px] decoration-soluter-red-500"
             }
         ],
         "paragraphs": [

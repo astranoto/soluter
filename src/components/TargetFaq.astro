@@ -15,7 +15,7 @@ const { title, paragraphs, underlinedWords } = Astro.props;
 ---
 
 <Collapse>
-  <h4 class="mb-1 items-center font-bold" slot="title">
+  <h4 class="mb-1 items-center text-[20px] font-bold" slot="title">
     {
       title.split(" ").map((word) => {
         const underlinedWord = underlinedWords.find(
@@ -34,7 +34,6 @@ const { title, paragraphs, underlinedWords } = Astro.props;
               >
                 {word}
               </span>
-              &nbsp;
             </>
           );
         }

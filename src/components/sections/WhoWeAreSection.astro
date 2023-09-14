@@ -1,0 +1,55 @@
+---
+import Icon from "astro-icon";
+import WhoWeAreCard from "../WhoWeAreCard.astro";
+import whoWeAre from "../../resources/who-we-are.json";
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+  containerClasses?: string;
+}
+
+const { containerClasses } = Astro.props;
+---
+
+<section
+  class={twMerge(
+    "section-padding mt-20 flex flex-col items-center",
+    containerClasses,
+  )}
+>
+  <div class="relative">
+    <Icon
+      name="blocks/creative-tech-makers"
+      class="absolute -left-12 -top-2 h-12"
+    />
+    <h3 class="px-4 text-center font-bold sm:px-10 lg:px-14 2xl:px-52">
+      Siamo creative technology makers.
+    </h3>
+  </div>
+  <div
+    class="just mt-16 flex flex-col items-center space-y-12 xl:grid xl:grid-cols-3 xl:items-baseline xl:gap-16 xl:space-y-0"
+  >
+    {
+      whoWeAre.map((item) => (
+        <WhoWeAreCard
+          title={item.title}
+          icon={item.icon}
+          iconClasses={item.iconClasses}
+          subicon={item.subicon}
+          subiconClasses={item.subiconClasses}
+          paragraphs={item.paragraphs}
+        />
+      ))
+    }
+  </div>
+  <div class="mt-20 flex flex-col items-center justify-center space-y-8">
+    <h3 class="">
+      Siamo quelli di Astranoto: se vuoi saperne di più, <a
+        href="https://astranoto.com"
+        style="font-size: inherit;"
+        class="font-bold underline decoration-soluter-orange-500 decoration-4 underline-offset-8 hover:text-black/60"
+        >guarda qui!</a
+      >
+    </h3>
+  </div>
+</section>

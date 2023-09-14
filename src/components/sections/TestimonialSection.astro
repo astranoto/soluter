@@ -1,0 +1,29 @@
+---
+import { twMerge } from "tailwind-merge";
+interface Props {
+  containerClasses?: string;
+}
+
+const { containerClasses } = Astro.props;
+---
+
+<section
+  class={twMerge(
+    "bg-soluter-gray-500 section-padding pt-20 flex flex-col items-center",
+    containerClasses,
+  )}
+>
+  <div class="relative">
+    <h3 class="px-4 text-center font-bold sm:px-10 lg:px-14 2xl:px-52">
+      Testimonianze
+    </h3>
+    <h3 class="mt-4 px-4 text-center sm:px-10 lg:px-14 2xl:px-52">
+      Cerchi anche tu una soluzione personalizzata?
+    </h3>
+  </div>
+  <a
+    href="mailto:info@soluter.it"
+    class="btn mt-12 bg-soluter-green-500 px-6 py-1 text-white hover:bg-soluter-green-500/90"
+    >Scrivici per <br /> parlarne!</a
+  >
+</section>

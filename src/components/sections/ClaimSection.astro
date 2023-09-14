@@ -1,0 +1,40 @@
+---
+import Icon from "astro-icon";
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+  containerClasses?: string;
+}
+
+const { containerClasses } = Astro.props;
+---
+
+<section
+  class={twMerge(
+    "relative mt-6 flex items-end justify-center px-6 sm:mt-16 sm:px-10 md:px-14 lg:mt-2",
+    containerClasses,
+  )}
+>
+  <div
+    class="absolute -left-8 inline-flex items-end sm:-left-10 lg:left-24 xl:left-32 2xl:left-56"
+  >
+    <Icon name="green-rectangle" class="h-5" />
+    <Icon name="purple-rectangle" class="ml-12 hidden w-5 sm:block" />
+    <Icon name="orange-square" class="ml-2 h-5 sm:ml-4" />
+  </div>
+
+  <h1 class="mx-4 w-max text-center font-medium sm:mx-7">
+    Il software 100% custom.
+  </h1>
+  <div
+    class="absolute -right-0 inline-flex items-end lg:right-24 xl:right-20 2xl:right-40"
+  >
+    <Icon name="red-rectangle" class="h-5" />
+    <Icon
+      name="blue-rectangle"
+      class="ml-8 hidden w-5 hover:text-black sm:block"
+    />
+    <Icon name="white-rectangle" class="ml-2 mr-5 hidden w-5 md:block" />
+    <Icon name="black-rectangle" class="ml-12 hidden h-5 xl:block" />
+  </div>
+</section>

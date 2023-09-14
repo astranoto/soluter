@@ -1,17 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon";
 import Footer from "../components/Footer.astro";
-import markets from "../resources/markets.json";
-import plans from "../resources/plans.json";
-import TargetMarket from "../components/TargetMarket.astro";
-import whatWeOffer from "../resources/what-we-offer.json";
-import faqs from "../resources/faq.json";
-import whoWeAre from "../resources/who-we-are.json";
-import TargetFaq from "../components/TargetFaq.astro";
-import PlanCard from "../components/PlanCard.astro";
-import WhatWeOfferCard from "../components/WhatWeOfferCard.astro";
-import WhoWeAreCard from "../components/WhoWeAreCard.astro";
+import Layout from "../layouts/Layout.astro";
+
+import ClaimSection from "../components/sections/ClaimSection.astro";
+import FaqSection from "../components/sections/FaqSection.astro";
+import MarketSection from "../components/sections/MarketSection.astro";
+import PlanSection from "../components/sections/PlanSection.astro";
+import TestimonialSection from "../components/sections/TestimonialSection.astro";
+import WhatWeOfferSection from "../components/sections/WhatWeOfferSection.astro";
+import WhoWeAreSection from "../components/sections/WhoWeAreSection.astro";
 ---
 
 <Layout title="Soluter - by Astranoto">
@@ -19,359 +17,110 @@ import WhoWeAreCard from "../components/WhoWeAreCard.astro";
     <nav class="flex justify-center px-6 py-6 sm:px-10 md:px-14 2xl:mt-6">
       <Icon name="logo" class="w-64 lg:w-72 2xl:w-96" />
     </nav>
-    <section
-      class="relative mt-6 flex items-end justify-center px-6 sm:mt-16 sm:px-10 md:px-14 lg:mt-2"
-    >
-      <div
-        class="absolute -left-8 inline-flex items-end sm:-left-10 lg:left-24 xl:left-32 2xl:left-56"
-      >
-        <Icon name="green-rectangle" class="h-5" />
-        <Icon name="purple-rectangle" class="ml-12 hidden w-5 sm:block" />
-        <Icon name="orange-square" class="ml-2 h-5 sm:ml-4" />
-      </div>
+    <ClaimSection />
+    <MarketSection containerClasses="border-0 border-b-4 pb-24 border-black" />
 
-      <h1 class="mx-4 w-max text-center font-medium sm:mx-7">
-        Il software 100% custom.
-      </h1>
-      <div
-        class="absolute -right-0 inline-flex items-end lg:right-24 xl:right-20 2xl:right-40"
-      >
-        <Icon name="red-rectangle" class="h-5" />
-        <Icon
-          name="blue-rectangle"
-          class="ml-8 hidden w-5 hover:text-black sm:block"
-        />
-        <Icon name="white-rectangle" class="ml-2 mr-5 hidden w-5 md:block" />
-        <Icon name="black-rectangle" class="ml-12 hidden h-5 xl:block" />
-      </div>
-    </section>
-    <section
-      class="section-padding mt-16 grid grid-cols-1 items-center justify-center gap-16 lg:mt-12 lg:grid-cols-2 lg:items-start xl:mt-20 xl:gap-16 2xl:grid-cols-4 2xl:gap-14"
-    >
-      {
-        markets.map((market) => (
-          <TargetMarket
-            title={market.title}
-            subtitle={market.subtitle}
-            icon={market.icon}
-            iconClasses={market.iconClasses}
-            paragraphs={market.paragraphs}
-          />
-        ))
-      }
-    </section>
-    <div class="mt-10 flex items-end justify-center">
-      <Icon name="red-rectangle" class="h-4" />
-      <Icon
-        name="blue-rectangle"
-        class="ml-8 hidden w-4 hover:text-black sm:block"
-      />
-      <Icon name="white-rectangle" class="ml-4 mr-5 hidden w-3 md:block" />
-      <Icon name="black-rectangle" class="ml-26 h-4" />
-    </div>
-    <section class="section-padding mt-10 flex flex-col items-center">
-      <div class="relative">
-        <Icon
-          name="red-rectangle"
-          class="absolute -left-10 top-10 h-5 2xl:left-20"
-        />
-        <Icon
-          name="blue-rectangle"
-          class="absolute top-24 hidden w-5 lg:-left-52 lg:block 2xl:-left-36"
-        />
-
-        <h4 class="px-4 text-center sm:px-10 lg:px-14 xl:px-40 2xl:px-52">
-          Questi sono solo alcuni esempi di quello che possiamo realizzare
-          insieme: raccontaci quello di cui hai bisogno e costruiremo la
-          soluzione su misura per raggiungere i tuoi obiettivi.
-        </h4>
-      </div>
-      <a
-        href="mailto:info@soluter.it"
-        class="btn mt-12 bg-soluter-purple-500 px-8 py-1 text-white hover:bg-soluter-purple-500/90"
-        >Contattaci</a
-      >
-    </section>
-    <div class="relative mt-24">
+    <div class="relative">
       <Icon
         name="blocks/orange-black-down-stair"
-        class="absolute -top-5 left-10 w-10 sm:left-14 2xl:left-96"
+        class="absolute -top-[1.4rem] left-10 w-10 sm:left-14 2xl:left-96"
       />
-      <hr class="w-full border-0 border-b-4 border-black" />
       <Icon
         name="green-rectangle"
-        class="absolute -top-[1.1rem] right-24 h-5 sm:right-44 2xl:right-96"
+        class="absolute -top-[1.3rem] right-24 h-5 sm:right-44 2xl:right-96"
       />
       <Icon
         name="white-rectangle"
-        class="absolute -top-[1.1rem] right-14 h-5 sm:right-36 2xl:right-80"
+        class="absolute -top-[1.3rem] right-14 h-5 sm:right-36 2xl:right-80"
       />
       <Icon
         name="purple-rectangle"
-        class="absolute -top-[3.4rem] hidden w-4 lg:right-14 lg:block 2xl:right-44"
+        class="absolute -top-[3.6rem] hidden w-4 lg:right-14 lg:block 2xl:right-44"
       />
     </div>
-    <section class="section-padding relative sm:mt-4">
-      <Icon
-        name="blocks/kinda-box"
-        class="absolute left-4 top-1 hidden h-12 lg:left-8 lg:block 2xl:left-44"
-      />
-      <h3
-        class="mt-16 px-4 text-center font-bold sm:px-8 lg:px-14 xl:px-40 2xl:px-72"
-      >
-        Il nostro approccio è modulare e personalizzabile in tutte le sue fasi,
-        anche quella del pagamento.
-      </h3>
-      <h4 class="mt-4 px-4 text-center sm:px-6 lg:px-12 xl:px-40 2xl:px-72">
-        Ecco perché abbiamo pensato a una formula flessibile e non vincolante,
-        che ti permette di valutare la programmazione “step by step”.
-      </h4>
-
-      <div
-        class="just mt-16 flex flex-col items-center space-y-8 xl:grid xl:grid-cols-3 xl:items-baseline xl:gap-8 xl:space-y-0"
-      >
-        {
-          plans.map((plan) => (
-            <PlanCard
-              name={plan.name}
-              icon={plan.icon}
-              iconClasses={plan.iconClasses}
-              sections={plan.sections}
-            />
-          ))
-        }
-      </div>
-    </section>
-    <section class="section-padding mt-20 flex flex-col items-center">
-      <div class="relative">
-        <Icon
-          name="blocks/crane"
-          class="absolute -left-9 h-10 lg:h-14 xl:-left-14 xl:h-20 2xl:left-10"
-        />
-
-        <h4 class="px-4 text-center sm:px-10 lg:px-14 xl:px-40 2xl:px-72">
-          I nostri SAAS sono sviluppati su misura e lavoriamo al fianco dei
-          nostri clienti per costruire esattamente ciò di cui hanno bisogno: per
-          questo ci piace, prima di tutto, parlarne per capire insieme quale sia
-          la formula più adatta al tuo progetto.
-        </h4>
-      </div>
-      <a
-        href="tel:+393356287441"
-        class="btn mt-12 bg-soluter-blue-500 px-8 py-1 text-white hover:bg-soluter-blue-500/90"
-        >Chiamaci!</a
-      >
-    </section>
-    <div class="relative mt-24">
+    <PlanSection containerClasses="border-0 border-b-4 pb-24 border-black" />
+    <div class="bg-soluter-gray-500 relative">
       <Icon
         name="white-rectangle"
-        class="absolute -top-[1.1rem] left-20 h-5 sm:left-16 2xl:left-96"
+        class="absolute -top-[1.3rem] left-20 h-5 sm:left-16 2xl:left-96"
       />
-      <hr class="w-full border-0 border-b-4 border-black" />
       <Icon
         name="blocks/blue-purple-oblique"
-        class="absolute -top-[2.8rem] right-32 h-12 sm:right-44 lg:right-60 2xl:right-96"
+        class="absolute -top-[3rem] right-32 h-12 sm:right-44 lg:right-60 2xl:right-96"
       />
       <Icon
         name="black-rectangle"
-        class="absolute -top-[1.1rem] right-10 h-5 sm:right-36 2xl:right-72"
+        class="absolute -top-[1.3rem] right-10 h-5 sm:right-36 2xl:right-72"
       />
       <Icon
         name="green-rectangle-vertical"
-        class="absolute -top-[1.4rem] right-6 hidden w-4 lg:right-24 lg:block 2xl:right-44"
+        class="absolute -top-[1.6rem] right-6 hidden w-4 lg:right-24 lg:block 2xl:right-44"
       />
       <Icon
         name="blocks/orange-red-stacked"
-        class="absolute -top-[2.1rem] right-2 hidden w-5 lg:right-12 lg:block 2xl:right-14"
+        class="absolute -top-[2.3rem] right-2 hidden w-5 lg:right-12 lg:block 2xl:right-14"
       />
     </div>
-    <section class="section-padding relative sm:mt-4">
-      <Icon
-        name="blocks/rocket"
-        class="absolute -top-10 left-2 h-16 lg:left-4 lg:top-6 lg:block lg:h-20 xl:-top-5 xl:h-36 2xl:left-32"
-      />
-      <h3
-        class="mt-16 px-4 text-center font-bold sm:px-8 lg:px-14 xl:px-40 2xl:px-52"
-      >
-        Comprendere e anticipare i cambiamenti per prepararsi alle nuove sfide
-        globali.
-      </h3>
-      <h4 class="mt-4 px-4 text-center sm:px-6 lg:px-12 xl:px-40 2xl:px-72">
-        Il nostro lavoro è progettare e sviluppare soluzioni informatiche e
-        tecnologiche su misura che ti aiutano a migliorare le performance della
-        tua azienda. Lo facciamo mettendo in pratica il nostro metodo: perché lo
-        abbiamo messo a punto negli anni e sappiamo che funziona al 100%.
-      </h4>
-
-      <div
-        class="just mt-16 flex flex-col items-center space-y-12 xl:grid xl:grid-cols-4 xl:items-baseline xl:gap-16 xl:space-y-0"
-      >
-        {
-          whatWeOffer.map((offer) => (
-            <WhatWeOfferCard
-              title={offer.title}
-              icon={offer.icon}
-              iconClasses={offer.iconClasses}
-              paragraphs={offer.paragraphs}
-            />
-          ))
-        }
-      </div>
-    </section>
-    <section class="section-padding mt-20 flex flex-col items-center">
-      <div class="relative">
-        <h3 class="px-4 text-center font-bold sm:px-10 lg:px-14 2xl:px-52">
-          Hai in mente un'idea ma non sai come realizzarla?
-        </h3>
-      </div>
-      <a
-        href="tel:todo"
-        class="btn mt-12 bg-soluter-blue-500 px-8 py-1 text-white hover:bg-soluter-blue-500/90"
-        >Chiamaci!</a
-      >
-    </section>
-    <div class="relative mt-24">
+    <WhatWeOfferSection
+      containerClasses="pb-24 border-0 border-b-4 pb-24 border-black"
+    />
+    <div class="relative">
       <Icon
         name="blocks/tree"
-        class="absolute -top-[6.615rem] left-12 w-16 sm:left-16 2xl:left-96"
+        class="absolute -top-[6.815rem] left-12 w-16 sm:left-16 2xl:left-96"
       />
       <Icon
         name="green-rectangle-vertical"
-        class="absolute -top-[1.8rem] left-36 h-8 sm:left-36 2xl:left-[32rem]"
+        class="absolute -top-[2rem] left-36 h-8 sm:left-36 2xl:left-[32rem]"
       />
       <Icon
         name="red-rectangle"
-        class="absolute -top-[.8rem] right-40 h-4 lg:right-64"
+        class="absolute -top-[1rem] right-40 h-4 lg:right-64"
       />
-      <hr class="w-full border-0 border-b-4 border-black" />
     </div>
-    <section class="section-padding mt-20 flex flex-col items-center">
-      <div class="relative">
-        <h3 class="px-4 text-center font-bold sm:px-10 lg:px-14 2xl:px-52">
-          Testimonianze
-        </h3>
-        <h3 class="mt-4 px-4 text-center sm:px-10 lg:px-14 2xl:px-52">
-          Cerchi anche tu una soluzione personalizzata?
-        </h3>
-      </div>
-      <a
-        href="mailto:info@soluter.it"
-        class="btn mt-12 bg-soluter-green-500 px-6 py-1 text-white hover:bg-soluter-green-500/90"
-        >Scrivici per <br /> parlarne!</a
-      >
-    </section>
-    <div class="relative mt-24">
+    <TestimonialSection
+      containerClasses="pb-24 border-0 border-b-4 pb-24 border-black"
+    />
+    <div class="relative">
       <Icon
         name="blocks/orange-black-down-stair"
-        class="absolute -top-5 left-10 w-10 sm:left-14 2xl:left-96"
+        class="absolute -top-[1.4rem] left-10 w-10 sm:left-14 2xl:left-96"
       />
       <Icon
         name="white-rectangle"
-        class="absolute -top-[1.1rem] left-14 h-5 sm:left-44 2xl:left-80"
+        class="absolute -top-[1.3rem] left-14 h-5 sm:left-44 2xl:left-80"
       />
-      <hr class="w-full border-0 border-b-4 border-black" />
       <Icon
         name="green-rectangle"
-        class="absolute -top-[1.1rem] right-4 h-5 sm:right-52 2xl:right-72"
+        class="absolute -top-[1.3rem] right-4 h-5 sm:right-52 2xl:right-72"
       />
       <Icon
         name="purple-rectangle"
-        class="absolute -top-[3.4rem] hidden w-4 lg:right-1 lg:block 2xl:right-44"
+        class="absolute -top-[3.6rem] hidden w-4 lg:right-1 lg:block 2xl:right-44"
       />
     </div>
-    <section class="section-padding mt-20 flex flex-col items-center">
-      <div class="relative">
-        <Icon
-          name="blocks/creative-tech-makers"
-          class="absolute -left-12 -top-2 h-12"
-        />
-        <h3 class="px-4 text-center font-bold sm:px-10 lg:px-14 2xl:px-52">
-          Siamo creative technology makers.
-        </h3>
-      </div>
-      <div
-        class="just mt-16 flex flex-col items-center space-y-12 xl:grid xl:grid-cols-3 xl:items-baseline xl:gap-16 xl:space-y-0"
-      >
-        {
-          whoWeAre.map((item) => (
-            <WhoWeAreCard
-              title={item.title}
-              icon={item.icon}
-              iconClasses={item.iconClasses}
-              subicon={item.subicon}
-              subiconClasses={item.subiconClasses}
-              paragraphs={item.paragraphs}
-            />
-          ))
-        }
-      </div>
-      <div class="mt-20 flex flex-col items-center justify-center space-y-8">
-        <h3 class="">
-          Siamo quelli di Astranoto: se vuoi saperne di più, <a
-            href="https://astranoto.com"
-            style="font-size: inherit;"
-            class="font-bold underline decoration-soluter-orange-500 decoration-4 underline-offset-8 hover:text-black/60"
-            >guarda qui!</a
-          >
-        </h3>
-      </div>
-    </section>
-    <div class="relative mt-24">
+    <WhoWeAreSection
+      containerClasses="pb-24 border-0 border-b-4 pb-24 border-black"
+    />
+    <div class="relative">
       <Icon
         name="blocks/orange-black-down-stair"
-        class="absolute -top-5 right-10 w-10 sm:right-14 2xl:right-96"
+        class="absolute -top-[1.4rem] right-10 w-10 sm:right-14 2xl:right-96"
       />
       <Icon
         name="white-rectangle"
-        class="absolute -top-[1.1rem] right-14 h-5 sm:right-44 2xl:right-80"
+        class="absolute -top-[1.3rem] right-14 h-5 sm:right-44 2xl:right-80"
       />
-      <hr class="w-full border-0 border-b-4 border-black" />
       <Icon
         name="green-rectangle"
-        class="absolute -top-[1.1rem] left-4 h-5 sm:left-52 2xl:left-72"
+        class="absolute -top-[1.3rem] left-4 h-5 sm:left-52 2xl:left-72"
       />
       <Icon
         name="purple-rectangle"
-        class="absolute -top-[3.4rem] hidden w-4 lg:left-1 lg:block 2xl:left-44"
+        class="absolute -top-[3.6rem] hidden w-4 lg:left-1 lg:block 2xl:left-44"
       />
     </div>
-    <div class="flex items-center"></div>
-    <section class="section-padding mt-16 grid grid-rows-1 justify-center">
-      <Icon name="blocks/question" class="item-center h-12" />
-      <div class="items-center gap-0">
-        <h3 class="text-center font-bold sm:px-10 lg:px-14 2xl:px-52">
-          Queste sono alcune delle domande più frequenti che ci vengono poste
-          dai nostri clienti: se non trovi la risposta alla tua esigenza,
-          chiamaci per parlarne insieme!
-        </h3>
-      </div>
-      <div class="mt-24 flex flex-col space-y-14 2xl:px-52">
-        {
-          faqs.map((faq) => (
-            <TargetFaq
-              title={faq.title}
-              underlinedWords={faq.underlinedWords}
-              paragraphs={faq.paragraphs}
-            />
-          ))
-        }
-      </div>
-      <div class="mb-14 mt-20 flex flex-col items-center justify-center">
-        <h3 class="flex flex-col items-center justify-center">
-          <span class="text-center font-bold"
-            >Ti aiutiamo a costruire step-by-step esattamente il software di cui
-            hai bisogno.</span
-          >
-          <span class="text-center">E il primo passo è parlarne insieme.</span>
-        </h3>
-        <a
-          href="mailto:info@soluter.it"
-          class="btn mt-12 bg-soluter-purple-500 px-6 py-1 text-center text-white hover:bg-soluter-purple-500/90"
-        >
-          Contattaci
-        </a>
-      </div>
-    </section>
+    <FaqSection />
     <Footer />
   </main>
 </Layout>

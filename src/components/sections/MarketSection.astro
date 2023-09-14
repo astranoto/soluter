@@ -1,0 +1,67 @@
+---
+import TargetMarket from "../TargetMarket.astro";
+import markets from "../../resources/markets.json";
+import Icon from "astro-icon";
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+  containerClasses?: string;
+}
+
+const { containerClasses } = Astro.props;
+---
+
+<section
+  class={twMerge(
+    "relative mt-16 xl:mt-20 lg:mt-12 section-padding",
+    containerClasses,
+  )}
+>
+  <div
+    class="grid grid-cols-1 items-center justify-center gap-16 lg:grid-cols-2 lg:items-start xl:mt-20 xl:gap-16 2xl:grid-cols-4 2xl:gap-14"
+  >
+    {
+      markets.map((market) => (
+        <TargetMarket
+          title={market.title}
+          subtitle={market.subtitle}
+          icon={market.icon}
+          iconClasses={market.iconClasses}
+          paragraphs={market.paragraphs}
+        />
+      ))
+    }
+  </div>
+  <div class="mt-10 flex items-end justify-center">
+    <Icon name="red-rectangle" class="h-4" />
+    <Icon
+      name="blue-rectangle"
+      class="ml-8 hidden w-4 hover:text-black sm:block"
+    />
+    <Icon name="white-rectangle" class="ml-4 mr-5 hidden w-3 md:block" />
+    <Icon name="black-rectangle" class="ml-26 h-4" />
+  </div>
+  <div class="mt-10 flex flex-col items-center">
+    <div class="relative">
+      <Icon
+        name="red-rectangle"
+        class="absolute -left-10 top-10 h-5 2xl:left-20"
+      />
+      <Icon
+        name="blue-rectangle"
+        class="absolute top-24 hidden w-5 lg:-left-52 lg:block 2xl:-left-36"
+      />
+
+      <h4 class="px-4 text-center sm:px-10 lg:px-14 xl:px-40 2xl:px-52">
+        Questi sono solo alcuni esempi di quello che possiamo realizzare
+        insieme: raccontaci quello di cui hai bisogno e costruiremo la soluzione
+        su misura per raggiungere i tuoi obiettivi.
+      </h4>
+    </div>
+    <a
+      href="mailto:info@soluter.it"
+      class="btn mt-12 bg-soluter-purple-500 px-8 py-1 text-white hover:bg-soluter-purple-500/90"
+      >Contattaci</a
+    >
+  </div>
+</section>

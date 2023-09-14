@@ -18,34 +18,36 @@ interface Props {
 const props = Astro.props;
 ---
 
-<Collapse containerClass="w-full">
+<div>
   <div
     class="relative flex h-12 w-full items-center justify-center space-x-4 xl:h-20 xl:justify-normal 2xl:h-8"
-    slot="title"
   >
     <h3 class="font-bold xl:pl-6" set:html={props.name} />
     <Icon name={props.icon} class={twMerge("w-5", props.iconClasses)} />
   </div>
-  <div slot="content">
+  <div>
     {
       props.sections.map((section) => (
-        <div class="mb-10 mt-10">
-          <div class="mx-auto flex items-end space-x-3 md:px-14 xl:px-7">
+        <Collapse containerClass="w-full my-10">
+          <div
+            slot="title"
+            class="mx-auto flex items-end space-x-3 md:px-14 lg:mx-0 xl:px-7"
+          >
             <Icon
               name={section.icon}
-              class={twMerge("-mb-[5px] w-4", section.iconClasses)}
+              class={twMerge(" w-4", section.iconClasses)}
             />
             <h4 class={`${section.underlineClass} font-bold`}>
               {section.title}
             </h4>
           </div>
-          <div class="ml-6 mt-5 md:px-14 lg:px-0 2xl:px-8">
+          <div slot="content" class="ml-6 mt-5 md:px-14 lg:px-0 2xl:px-8">
             {section.paragraphs.map((paragraph) => (
               <p class="">{paragraph}</p>
             ))}
           </div>
-        </div>
+        </Collapse>
       ))
     }
   </div>
-</Collapse>
+</div>

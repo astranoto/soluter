@@ -40,7 +40,16 @@
     display: none;
   }
 
+  .absolute-y-center {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
   /* svg {
     transform-origin: top left;
   } */
+}
+
+html {
+  scroll-behavior: smooth;
 }

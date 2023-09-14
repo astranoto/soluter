@@ -1,0 +1,57 @@
+---
+import { Icon } from "astro-icon";
+import { twMerge } from "tailwind-merge";
+interface Props {
+  containerClasses?: string;
+  label: string;
+  labelClass?: string;
+  links: {
+    label: string;
+    href: string;
+  }[];
+  noArrow?: boolean;
+  openLeft?: boolean;
+}
+
+const props = Astro.props;
+---
+
+<div class={twMerge(props.containerClasses)}>
+  <div class="group relative">
+    <div
+      class={twMerge(
+        "peer flex space-x-1 group items-center",
+        props.labelClass,
+      )}
+    >
+      <slot name="label">
+        <p>{props.label}</p>
+      </slot>
+      {!props.noArrow && <Icon name="lucide:chevron-down" class="h-4" />}
+    </div>
+
+    <div
+      class:list={[
+        "invisible absolute w-max rounded-md bg-white shadow hover:visible peer-hover:visible",
+        {
+          "right-0": props.openLeft,
+        },
+      ]}
+    >
+      <div class="flex flex-col p-1">
+        <slot name="content">
+          {
+            props.links.map((link) => (
+              <a
+                class="valsabike-orange-underline rounded-md px-3 py-2 hover:bg-gray-100"
+                href={link.href}
+              >
+                {link.label}
+              </a>
+            ))
+          }
+        </slot>
+      </div>
+    </div>
+  </div>
+</div>

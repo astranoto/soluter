@@ -5,13 +5,15 @@ import plans from "../../resources/plans.json";
 import { twMerge } from "tailwind-merge";
 
 interface Props {
+  id?: string;
   containerClasses?: string;
 }
 
-const { containerClasses } = Astro.props;
+const { id, containerClasses } = Astro.props;
 ---
 
 <section
+  id={id}
   class={twMerge(
     "bg-soluter-gray-500 section-padding relative sm:pt-20",
     containerClasses,

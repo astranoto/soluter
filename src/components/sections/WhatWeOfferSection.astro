@@ -5,21 +5,23 @@ import whatWeOffer from "../../resources/what-we-offer.json";
 import { twMerge } from "tailwind-merge";
 
 interface Props {
+  id?: string;
   containerClasses?: string;
 }
 
-const { containerClasses } = Astro.props;
+const { id, containerClasses } = Astro.props;
 ---
 
-<section class={twMerge("section-padding relative sm:mt-4", containerClasses)}>
+<section
+  id={id}
+  class={twMerge("section-padding relative sm:pt-20", containerClasses)}
+>
   <div>
     <Icon
       name="blocks/rocket"
-      class="absolute -top-10 left-2 h-16 lg:left-4 lg:top-6 lg:block lg:h-20 xl:-top-5 xl:h-36 2xl:left-32"
+      class="absolute -top-10 left-2 h-16 lg:left-4 lg:top-6 lg:block lg:h-20 xl:top-10 xl:h-36 2xl:left-32"
     />
-    <h3
-      class="mt-16 px-4 text-center font-bold sm:px-8 lg:px-14 xl:px-40 2xl:px-52"
-    >
+    <h3 class="px-4 text-center font-bold sm:px-8 lg:px-14 xl:px-40 2xl:px-52">
       Comprendere e anticipare i cambiamenti per prepararsi alle nuove sfide
       globali.
     </h3>

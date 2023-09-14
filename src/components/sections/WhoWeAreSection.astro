@@ -5,15 +5,17 @@ import whoWeAre from "../../resources/who-we-are.json";
 import { twMerge } from "tailwind-merge";
 
 interface Props {
+  id?: string;
   containerClasses?: string;
 }
 
-const { containerClasses } = Astro.props;
+const { id, containerClasses } = Astro.props;
 ---
 
 <section
+  id={id}
   class={twMerge(
-    "section-padding mt-20 flex flex-col items-center",
+    "section-padding pt-20 flex flex-col items-center",
     containerClasses,
   )}
 >

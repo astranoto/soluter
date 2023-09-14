@@ -5,13 +5,15 @@ import Icon from "astro-icon";
 import { twMerge } from "tailwind-merge";
 
 interface Props {
+  id?: string;
   containerClasses?: string;
 }
 
-const { containerClasses } = Astro.props;
+const { id, containerClasses } = Astro.props;
 ---
 
 <section
+  id={id}
   class={twMerge(
     "bg-soluter-gray-500 section-padding pt-16 grid grid-rows-1 justify-center",
     containerClasses,

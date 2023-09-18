@@ -23,7 +23,7 @@ module.exports = {
           500: "#C22C3E",
         },
         "soluter-gray": {
-          500: "#F5F5F5",
+          500: "#ececec",
         },
       },
     },

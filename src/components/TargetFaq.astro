@@ -18,11 +18,34 @@ const { title, paragraphs, underlinedWords } = Astro.props;
   <h4 class="mb-1 items-center text-[20px] font-bold" slot="title">
     {
       title.split(" ").map((word) => {
+        const specialChars = /[ ?;,:]+/g;
+
         const underlinedWord = underlinedWords.find(
-          (underlinedWord) => underlinedWord.word === word,
+          (underlinedWord) =>
+            underlinedWord.word === word.replaceAll(specialChars, ""),
         );
 
         if (underlinedWord) {
+          // strip away any special characters, and add them back after
+          // the word
+          if (word.match(specialChars)) {
+            const specialChar = word.match(specialChars)![0];
+
+            return (
+              <span style="font-size: 0;">
+                <span
+                  class={twMerge(
+                    underlinedWord.class,
+                    "inline-block whitespace-nowrap text-[20px]",
+                  )}
+                >
+                  {word.replaceAll(specialChars, "")}
+                </span>
+                <span class="text-[20px]">{specialChar.trim()}</span>
+              </span>
+            );
+          }
+
           return (
             <>
               <span
@@ -34,7 +57,6 @@ const { title, paragraphs, underlinedWords } = Astro.props;
               >
                 {word}
               </span>
-              &nbsp;
             </>
           );
         }

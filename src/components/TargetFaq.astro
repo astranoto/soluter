@@ -32,22 +32,24 @@ const { title, paragraphs, underlinedWords } = Astro.props;
             const specialChar = word.match(specialChars)![0];
 
             return (
-              <span style="font-size: 0;">
-                <span
-                  class={twMerge(
-                    underlinedWord.class,
-                    "inline-block whitespace-nowrap text-[20px]",
-                  )}
-                >
-                  {word.replaceAll(specialChars, "")}
+              <>
+                <span style="font-size: 0;">
+                  <span
+                    class={twMerge(
+                      underlinedWord.class,
+                      "inline-block whitespace-nowrap text-[20px]",
+                    )}
+                  >
+                    {word.replaceAll(specialChars, "")}
+                  </span>
+                  <span class="text-[20px]">{specialChar.trim()}</span>{" "}
                 </span>
-                <span class="text-[20px]">{specialChar.trim()}</span>
-              </span>
+              </>
             );
           }
 
           return (
-            <>
+            <span>
               <span
                 class={twMerge(
                   underlinedWord.class,
@@ -56,12 +58,17 @@ const { title, paragraphs, underlinedWords } = Astro.props;
                 style="font-size: inherit;"
               >
                 {word}
-              </span>{" "}
-            </>
+              </span>
+              <span />
+            </span>
           );
         }
 
-        return `${word} `;
+        return (
+          <>
+            <span>{word} </span>
+          </>
+        );
       })
     }
   </h4>
